@@ -1,0 +1,114 @@
+
+.major-regular {
+    font-family: "Major Mono Display", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+  .nunito-200 {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+
+*
+{
+    margin:0px;
+    padding: 0px;
+}
+a
+{
+    text-decoration: none;
+}
+
+body
+{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    background-color: #2d2d2d;
+}
+header
+{
+    padding-top: 2rem;
+}
+.NavList 
+{
+    /* border-radius: 0.5rem; */
+    margin:0 2rem ;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr) repeat(1,3fr) repeat(2,1fr);
+    height: inherit;
+    font-weight: bold;
+}
+.NavList li,main h2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+main section
+{
+    font-size: 5rem;
+    padding-top: 5em;
+}
+.logo
+{
+    color: #ffffcb;
+}
+/* .sidenavs
+{
+    color: #ffffcb;
+} */
+/* .sticky li
+{
+    top: 2rem;
+    position: sticky;
+} */
+
+.hidenv
+{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(-100%);
+    transition: all 1s;
+}
+.hidenh
+{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show
+{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+@media(prefers-reduced-motion)
+{
+    .hiden
+    {
+        transition: none;
+    }
+}
+
+
+
+
+
+
+
+@media  screen and (max-width:1100px) {
+     .sidenavs a
+    {
+        display: none;
+    }
+}

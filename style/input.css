@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@layer components
+{
+
+    .NavList
+    {
+        @apply text-2xl text-white bg-black/10 backdrop-blur-sm shadow-2xl shadow-stone-800 ring rounded text-shadow-lg/40 bg-linear-to-br to-stone-400
+    }
+    .logo
+    {
+        @apply text-7xl text-[#ffffcb] text-shadow-lg/40
+    }
+}

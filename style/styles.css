@@ -34,14 +34,10 @@ body
     background-color: #2d2d2d;
 }
 
-.heroo
-{
-    margin-top: -104px;
-}
+
 
 nav
 {
-    /* height: 0; */
     position: sticky;
     z-index: 10000;
     top: 2rem;
@@ -49,7 +45,6 @@ nav
 
 .NavList 
 {
-    /* border-radius: 0.5rem; */
     margin:0 2rem ;
     padding: 1rem;
     display: grid;
@@ -64,40 +59,39 @@ nav
     align-items: center;
 
 }
-section h2
+
+
+
+
+/* ******************************************************************************************************  */
+                                            /* todo change to TWCSS layer component */
+
+.body
 {
-    font-size: 5rem;
+    font-size: 5.25vw;   
+     height: 100%;
+     display: flex;
+     align-items: center;
+     text-align: center;
+     justify-content: center;
+    flex-direction: column;
 }
-.thisis
-{
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    text-align: center;
-    h2
-    {
 
-        margin-top: 25vh;
-    }
+/* ******************************************************************************************************  */
+div>.body
+{
+    font-size: 3vw;    
 }
 
 
-/* .logo h1
+.logo
 {
-    @extend .major-regular;
-    color: #ffffcb;
-} */
-/* .sidenavs
-{
-    color: #ffffcb;
-} */
-/* .sticky li
-{
-    top: 2rem;
-    position: sticky;
-} */
+    font-size: 3.5vw;
+}
+
+.body .logo{
+    font-size: 7vw;
+}
 
 .hidenv,.hidenh
 {
@@ -142,5 +136,17 @@ section h2
     {
         display: none;
     }
+    nav .logo,.body h2{
+        font-size: 7vw;
+    }
+    .body .logo
+    {
+        font-size: 10vw;
+    }   
 }
-
+@media  screen and (max-width:600px){
+    nav .logo
+    {
+        font-size: 6vw;
+    }
+}

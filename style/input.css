@@ -9,6 +9,6 @@
     }
     .logo
     {
-        @apply text-7xl text-[#ffffcb] text-shadow-lg/40
+        @apply text-[#ffffcb] text-shadow-lg/40
     }
 }

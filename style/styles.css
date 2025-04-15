@@ -43,7 +43,7 @@ nav
     top: 2rem;
 }
 
-.NavList 
+.smallbar 
 {
     margin:0 2rem ;
     padding: 1rem;
@@ -52,7 +52,20 @@ nav
     height: inherit;
     font-weight: bold;
 }
-.NavList li
+.xpandbar 
+{
+    margin:0 2rem ;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height:35vh;
+    font-weight: bold;
+}
+.xpandbar li
+{
+    margin: auto;
+}
+.xpandbar, .smallbar li
 {
     display: flex;
     justify-content: center;
@@ -119,6 +132,11 @@ div>.body
     transform: translateX(0);
 }
 
+
+.displaynone{
+    display: none;
+}
+
 @media(prefers-reduced-motion)
 {
     .hidenh
@@ -143,6 +161,10 @@ div>.body
     {
         font-size: 10vw;
     }   
+    /* .smallbar
+    {
+        display: none;
+    } */
 }
 @media  screen and (max-width:600px){
     nav .logo

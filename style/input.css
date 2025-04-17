@@ -17,10 +17,14 @@
     }
     .first-home-content
     {
-        @apply bg-[url(../images/hero-op2.jpg)] bg-cover bg-bottom h-screen snap-start 
+        @apply bg-[url(../images/hero-op2.webp)] bg-cover bg-bottom h-screen snap-start 
     }
     .second-home-content
     {
-        @apply text-white h-screen bg-black center bg-[url(../images/hero-op1.jpg)] bg-bottom snap-start
+        @apply text-white h-screen bg-black bg-[url(../images/hero-op1.webp)] bg-bottom snap-start
     }
+    /* #name
+    {
+        @apply ring rounded bg-black/55
+    } */
 }

@@ -1,0 +1,298 @@
+@import "tailwindcss";
+.major-regular
+{
+    font-family: "Major Mono Display", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+
+.nunito-200 
+{
+font-family: "Nunito", sans-serif;
+font-optical-sizing: auto;
+font-weight: 200;
+font-style: normal;
+}
+
+
+*
+{
+    margin:0px;
+    padding: 0px;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+body
+{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:white;
+    background-color: #2d2d2d;
+}
+
+nav *
+{
+    position: relative;
+    z-index: 10000;
+}
+
+.sticky
+{
+    position: sticky;
+    top: 2rem;
+}
+.smallbar 
+{
+    margin:0 2rem ;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr) repeat(1,3fr) repeat(2,1fr);
+    height: inherit;
+    font-weight: bold;
+}
+nav a:not(.logo){
+    transition: all 0.5s;
+}
+nav a:not(.logo):hover{
+    font-size:1.875rem;
+    transition: all 0.5s;
+}
+.xpandbar 
+{
+    margin:0 2rem ;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height:35vh;
+    font-weight: bold;
+}
+.xpandbar li
+{
+    margin: auto;
+}
+.xpandbar, .smallbar li
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.R-L-content
+{
+    margin-bottom: 2.5vh;
+    padding: 1rem;
+    /* height: fit-content; */
+    width: 40%; 
+    display: flex;
+    /* flex-direct  ion: column; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+/* #sign
+{
+    height: fit-content;
+} */
+.reg-log
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+form
+{
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 90%;
+    row-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0 3rem; */
+}
+form *:not(#sub,#goToLogin,#goToSignin)
+{
+    width: 120%;
+}
+form #sub,#goToLogin,#goToSignin
+{
+    font-weight: bold;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+}
+form #sub:hover,#goToSignin:hover,#goToLogin:hover
+{
+    cursor: pointer;
+    background-color: color-mix(in srgb, #000 55%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-black) 55%, transparent);
+      transition: all 0.5s;
+    }
+}
+input,button
+{
+    background-color: color-mix(in srgb, #000 15%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-black) 15%, transparent);
+    }
+    border-radius: 0.5rem;
+--tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+/* ******************************************************************************************************  */
+                                            /* todo change to TWCSS layer component */
+
+.body
+{
+    font-size: 5.25vw;   
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     text-align: center;
+     justify-content: center;
+    flex-direction: column;
+}
+
+/* ******************************************************************************************************  */
+div>.body
+{
+    font-size: 3vw;    
+}
+
+
+.logo
+{
+    font-size: 3.5vw;
+}
+
+.body .logo{
+    font-size: 7vw;
+}
+
+.hidenv,.hidenh
+{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(-100%);
+    transition: all 1s;
+}
+.hidenh
+{
+    transform: translateX(-100%);
+    transition: all 2s;
+}
+.hidenh.logo:nth-child(2),.hero2:nth-child(2)
+{
+    transition-delay: 700ms;
+}
+
+
+.show
+{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+    transform: translateX(0);
+}
+
+
+.displaynone{
+    display: none;
+}
+
+
+
+.home-content
+{
+    overflow-x: hidden;
+}
+
+@media(prefers-reduced-motion)
+{
+    .hidenh
+    {
+        transition: none;
+    }
+    .hidenv
+    {
+        transition: none;
+    }
+}
+@media  screen and (min-width:1101px) {
+    .xpandbar
+    {
+        display: none;
+    }
+}
+@media  screen and (max-width:1100px) {
+      .sidenavs a
+    {
+        display: none;
+    }
+    nav .logo,.body h2{
+        font-size: 7vw;
+    }
+    .body .logo
+    {
+        font-size: 10vw;
+    }   
+    form
+    {
+        font-size: 1.5rem;
+    }
+    .R-L-content
+{
+    padding: 1rem;
+    height: fit-content;
+    width: 70%; 
+
+}
+    /* .smallbar
+    {
+        display: none;
+    } */
+}
+@media  screen and (max-width:600px){
+    nav .logo
+    {
+        font-size: 6vw;
+    }
+    .ct
+    {
+        padding-top: 4rem;
+    }
+    .R-L-content
+    {
+        padding: 1rem;
+        height: fit-content;
+        width: 100%; 
+    
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

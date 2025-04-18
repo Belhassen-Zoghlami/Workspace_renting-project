@@ -18,7 +18,6 @@ catch(mysqli_sql_exception)
 
 if ($conn)
 {
-    echo"connection established!";
     function mysqlquery($query)
     {
         global $conn;

@@ -9,10 +9,10 @@ require_once(__ROOT__.'/src/navbar.php');
                     <form  action="logSignVerf.php" method="POST">
                         
                         <label for="surname">User name: </label>
-                        <input class="ring" type="text" id="usrname" name="username" required>
+                        <input type="text" id="usrname" name="username" required>
                         
                         <label for="pswd">Password: </label>
-                        <input class="ring" type="password" id="pswdlog" name="pswd" required>
+                        <input type="password" id="pswdlog" name="pswd" required>
                         
                         <input type="submit" id="sub" name="Signlog" value="Log-in" >
                         <p>Dont have an account?</p>

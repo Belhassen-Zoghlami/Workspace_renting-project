@@ -17,7 +17,7 @@ function validateUsername(name)
 {
     return name.match
     (
-        /^([a-z]+(\_)?[a-z]+)+$/
+        /^([a-z]+(\_)?[a-z]+)+$/i
     );
 }
 

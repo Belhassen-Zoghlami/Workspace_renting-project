@@ -1,4 +1,8 @@
-
+<!-- Account: LogIn
+                when logged:\
+                    show current reservations with cancel possiblity
+                    sign-in become a Login possiblity
+     -->
 
 <?php
 

@@ -1,3 +1,7 @@
+<!-- 
+    create a session when logged in
+-->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,8 +11,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-        <link href="../style/output.css" rel="stylesheet">
         <link rel="stylesheet" href="../style/styles.css">
+        <link href="../style/output.css" rel="stylesheet">
         <title>Worki-N</title>
 
 
@@ -25,7 +29,7 @@
                 </li>  
                 
                 <li class="sidenavs"><a href="Login.php">Account</a></li>
-                <li class="sidenavs"><a href="Signup.php">Sign out</a></li>
+                <li class="sidenavs"><a href="Signup.php">Sign in</a></li>
             </ul>
 
 

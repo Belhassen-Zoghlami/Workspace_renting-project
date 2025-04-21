@@ -36,6 +36,18 @@ require_once(__ROOT__.'/src/navbar.php');
                             </h2>
                 </section>
             </div>
+            <div class="second-home-content bg-[url(../images/hero-op3.webp)]"> 
+                <section class="bg-black/50 h-screen snap-start body">
+
+                    <h2 class="hidenv hero2 text-shadow-lg/40">
+                                Where we offer a wide variety of workspaces for you to explore,
+                            </h2>
+                            <br><br>
+                    <h2 class="hidenv hero2 text-shadow-lg/40">
+                                aswell as ensure peak productivity and creativity.
+                            </h2>
+                </section>
+            </div>
         </div>
 
     <script>

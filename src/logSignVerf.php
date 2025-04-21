@@ -107,9 +107,8 @@ if ($_SERVER["REQUEST_METHOD"]==="POST"){
 
             echo "<script> 
             alert('$msg');
-            window.location.href='./Signup.php';
+            window.location.href='./Login.php';
             </script>";
-            
             break;
 
         case 'Log-in':
@@ -122,18 +121,6 @@ if ($_SERVER["REQUEST_METHOD"]==="POST"){
 
             mysqli_num_rows($query)>0 ? $status=true && $msg = "Connecting...": $msg = "Incorrect Credentials";
 
-
-            // if (mysqli_num_rows($query)>0)
-            // {
-            //     $sql = "SELECT * FROM `users` WHERE `password` = '$pswd'";
-            //     $query = mysqlquery($sql);
-            //     (mysqli_num_rows($query)>0)?$status=true && $msg = "Connecting...":$msg="Incorrect Password";
-
-            // } 
-            // else
-            // {
-            //     $msg = "incorrect Username!";
-            // }
             if ($status)
             {
                 echo "<script> 
@@ -158,4 +145,3 @@ else{
 
 
 
-?>

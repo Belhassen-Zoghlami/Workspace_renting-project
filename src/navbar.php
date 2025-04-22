@@ -1,7 +1,9 @@
 <!-- 
     create a session when logged in
 -->
-
+<?php 
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -27,9 +29,29 @@
                 <li >
                     <h1 ><a class="logo major-regular" id="logosm" href="index.php#top">Worki-n</a></h1>
                 </li>  
-                
-                <li class="sidenavs"><a href="Login.php">Account</a></li>
-                <li class="sidenavs"><a href="Signup.php">Sign in</a></li>
+                <?php 
+                    if (isset($_SESSION['useruid']))
+                    {
+                        if( isset($_SESSION['prio']) && ($_SESSION['prio']==='isAdminPrivMDM') )
+                        {
+                            echo "<li class=\"sidenavs\"><a href=\"Admin.php\">Account</a></li>";
+                            echo "<li class=\"sidenavs\"><a href=\"Logout.php\">Log out</a></li>";
+                        }
+                        else
+                        {
+                            echo "<li class=\"sidenavs\"><a href=\"Account.php\">Account</a></li>";
+                            echo "<li class=\"sidenavs\"><a href=\"Logout.php\">Log out</a></li>";
+                        }
+                    }
+                    else
+                    {
+                        echo "<li class=\"sidenavs\"><a href=\"Login.php\">Log in</a></li>";
+                        echo "<li class=\"sidenavs\"><a href=\"Signup.php\">Sign in</a></li>";
+
+                    }
+                ?>
+                <!-- <li class="sidenavs"><a href="Login.php">Account</a></li>
+                <li class="sidenavs"><a href="Signup.php">Sign in</a></li> -->
             </ul>
 
 
@@ -40,7 +62,27 @@
                 <li ><a href="index.php">Home</a></li>
                 <li ><a href="browse.php">Browse</a></li>
                 
-                <li ><a href="Login.php">Account</a></li>
-                <li ><a href="Signup.php">Sign out</a></li>
+                <?php 
+                    if (isset($_SESSION['useruid']))
+                    {
+                        if( isset($_SESSION['prio']) && ($_SESSION['prio']==='isAdminPrivMDM')  )
+                        {
+                            echo "<li><a href=\"Admin.php\">Account</a></li>";
+                            echo "<li><a href=\"Logout.php\">Log out</a></li>";
+
+                        }
+                        else
+                        {
+                            echo "<li><a href=\"Account.php\">Account</a></li>";
+                            echo "<li><a href=\"Logout.php\">Log out</a></li>";
+                        }
+                    }
+                    else
+                    {
+                        echo "<li><a href=\"Login.php\">Log in</a></li>";
+                        echo "<li><a href=\"Signup.php\">Sign in</a></li>";
+
+                    }
+                ?>
             </ul>
         </nav>

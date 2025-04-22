@@ -25,6 +25,7 @@ require_once(__ROOT__.'/src/navbar.php');
                         
                         <label for="confpswd">Confirm Password: </label>
                         <input type="password" id="confpswd" name="confpswd" required>
+                        <box-icon id="showsign" name='show' color="white" size="lg" style="width: 4rem; height: 4rem; display: inline-flex;"></box-icon>
                         
                         <input type="submit" id="sub" name="Signlog" value="Sign-Up" >
                         <p>Have an account already?</p>
@@ -34,7 +35,9 @@ require_once(__ROOT__.'/src/navbar.php');
             </main>
         </div>
     </section>
-        <script src="../js/Scripts.js"></script>
-        <script src="../js/formval.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="../js/Scripts.js"></script>
+    <script src="../js/passViz.js"></script>
+    <script src="../js/formval.js"></script>
     </body>
 </html>

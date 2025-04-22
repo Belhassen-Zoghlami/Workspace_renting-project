@@ -108,7 +108,7 @@ nav a:not(.logo):hover{
     align-items: center;
     text-align: center;
 }
-form
+.R-L-content form
 {
     font-size: 2rem;
     display: flex;
@@ -119,17 +119,22 @@ form
     align-items: center;
     /* padding: 0 3rem; */
 }
-form *:not(#sub,#goToLogin,#goToSignin)
+.R-L-content form label
+{
+    justify-content: end;
+}
+.R-L-content form *:not(#sub,#goToLogin,#goToSignin,#showpass)
 {
     width: 120%;
 }
-form #sub,#goToLogin,#goToSignin
+.R-L-content form #sub,#goToLogin,#goToSignin
 {
     font-weight: bold;
     width: fit-content;
     padding: 0.5rem 1rem;
 }
-form #sub:hover,#goToSignin:hover,#goToLogin:hover
+
+.R-L-content form #sub:hover,#goToSignin:hover,#goToLogin:hover
 {
     cursor: pointer;
     background-color: color-mix(in srgb, #000 55%, transparent);
@@ -138,19 +143,21 @@ form #sub:hover,#goToSignin:hover,#goToLogin:hover
       transition: all 0.5s;
     }
 }
-input,button
+input:not(#showpass),button
 {
     background-color: color-mix(in srgb, #000 15%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-black) 15%, transparent);
+    background-color: color-mix(in oklab, var(--color-black) 15%, transparent);
+    padding:.5rem;
     }
     border-radius: 0.5rem;
 --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
 }
-/* ******************************************************************************************************  */
-                                            /* todo change to TWCSS layer component */
-
+#showlog,#showsign
+{
+    cursor: pointer;
+}
 .body
 {
     font-size: 5.25vw;   
@@ -162,7 +169,6 @@ input,button
     flex-direction: column;
 }
 
-/* ******************************************************************************************************  */
 div>.body
 {
     font-size: 3vw;    
@@ -245,7 +251,7 @@ div>.body
     {
         font-size: 10vw;
     }   
-    form
+    .R-L-content form
     {
         font-size: 1.5rem;
     }
@@ -340,6 +346,7 @@ div>.body
       align-items: flex-end;
       transition: .6s cubic-bezier(.28,-0.03,0,.99);
       box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+      background-position:center;
   }
   .card > .row{
       color: white;
@@ -372,12 +379,15 @@ div>.body
   }
   .description p 
   {
-      color: #b0b0ba;
+    text-shadow:2rem 3rem 4rem #000000;
+      color: rgb(255, 255, 255);
       padding-top: 5px;
   }
   .description h4
   {
+    font-weight: bolder;
       text-transform: uppercase;
+      text-shadow:2rem 3rem 4rem #000000;
   }
   .wrapper input
   {
@@ -404,8 +414,25 @@ background-image: url('../images/wk2.webp');
 .card[for="c3"]
 {
 background-image: url('../images/wk3.webp');
+
 }
 .card[for="c4"]
 {
 background-image: url('../images/wk4.webp');
+}
+.card[for="c5"]
+{
+background-image: url('../images/wk5.webp');
+}
+.card[for="c6"]
+{
+background-image: url('../images/wk6.webp');
+}
+.card[for="c7"]
+{
+background-image: url('../images/wk7.webp');
+}
+.card[for="c8"]
+{
+background-image: url('../images/hero-op4.webp');
 }

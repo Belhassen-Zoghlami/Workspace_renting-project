@@ -109,6 +109,8 @@ if ($_SERVER["REQUEST_METHOD"]==="POST"){
             alert('$msg');
             window.location.href='./Login.php';
             </script>";
+            header("location: ./Login.php");
+            exit();
             break;
 
         case 'Log-in':
@@ -123,10 +125,38 @@ if ($_SERVER["REQUEST_METHOD"]==="POST"){
 
             if ($status)
             {
-                echo "<script> 
-                alert('$msg');
-                window.location.href='./index.php';
-                </script>";
+                session_start();
+                $sql = "SELECT `user_id`,`user_prio` FROM `users` WHERE `username`='$username'";
+                // die($sql);
+                $result=mysqlquery($sql);
+                $rows=mysqli_fetch_row($result);
+                $id=$rows[0];
+                $prio=$rows[1];
+                $_SESSION['userid']=$id;
+                $_SESSION['useruid']=$username;
+                if($prio==='0')
+                {
+                    $_SESSION['prio']='isAdminPrivMDM';
+                    echo "<script> 
+                    alert('Welcome admin: $username');
+                    window.location.href='./Admin.php';
+                    </script>";
+                    header("location: ./Admin.php");
+                    exit();
+                }
+                elseif ($prio==='2')
+                {
+                    echo "<script> 
+                    alert('$msg');
+                    window.location.href='./index.php';
+                    </script>";
+                    header("location: ./index.php");
+                    exit();
+                }
+                else
+                {
+                    die('tests failed');
+                }
             }
             else
             {
@@ -134,6 +164,8 @@ if ($_SERVER["REQUEST_METHOD"]==="POST"){
                 alert('$msg');
                 window.location.href='./Login.php';
                 </script>";
+                header("location: ./Login.php");
+                exit();
             }
             break;
     }

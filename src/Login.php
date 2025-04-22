@@ -12,8 +12,13 @@ require_once(__ROOT__.'/src/navbar.php');
                         <input type="text" id="usrname" name="username" required>
                         
                         <label for="pswd">Password: </label>
+                        <!-- <div>
+                            <input type="password" id="pswdlog" name="pswd" required>
+                            <box-icon name='show' color="white"></box-icon>
+                            </div> -->
+
                         <input type="password" id="pswdlog" name="pswd" required>
-                        
+                        <box-icon id="showlog" name='show' color="white" size="lg" style="width: 4rem; height: 4rem; display: inline-flex;"></box-icon>
                         <input type="submit" id="sub" name="Signlog" value="Log-in" >
                         <p>Dont have an account?</p>
                     </form>
@@ -21,7 +26,8 @@ require_once(__ROOT__.'/src/navbar.php');
             </main>
         </div>
     </section>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
         <script src="../js/Scripts.js"></script>
-        <script src="../js/formval.js"></script>
+        <script src="../js/passViz.js"></script>
     </body>
 </html>

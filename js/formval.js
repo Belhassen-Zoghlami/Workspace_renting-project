@@ -1,8 +1,11 @@
+
+
 const fname = document.getElementById('name');
 const lname = document.getElementById('surname');
 const uname = document.getElementById('username');
 const email = document.getElementById('email');
 const pswd = document.getElementById('pswd');
+
 const confpswd = document.getElementById('confpswd');
 
 function validateName(name)
@@ -50,6 +53,11 @@ function inputFeedBack(elem,valfunction,minLen,maxLen)
         elem.style.setProperty('color',color);
     })
 }
+// function showPass(pswd)
+// {
+//     pswd.setAttribute('type','text');
+// }
+
 
 inputFeedBack(fname,validateName,3,25);
 inputFeedBack(lname,validateName,3,25);
@@ -57,8 +65,11 @@ inputFeedBack(uname,validateUsername,3,25);
 inputFeedBack(email,validateEmail,10,30);
 inputFeedBack(pswd,validatePasswrd,6,30);
 
-confpswd.addEventListener("change", () =>
+if (confpswd)
+{
+    confpswd.addEventListener("change", () =>
     {
-    const color = confirmPasswrd(pswd,confpswd)?"green":"red";
-    confpswd.style.setProperty('color',color);
-})
+        const color = confirmPasswrd(pswd,confpswd)?"green":"red";
+        confpswd.style.setProperty('color',color);
+    });
+}

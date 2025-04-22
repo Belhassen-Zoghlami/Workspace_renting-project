@@ -112,9 +112,9 @@ for (let obj in list)
                 <input type="radio" name="slide" id="${elem['id'+elemIndx]}">
                 <label for="${elem['id'+elemIndx]}" class="card">
                 <div class="row">
-                <div class="icon">1</div>
+                <div class="icon">${elemIndx}</div>
                 <div class="description">
-                <h4>${elem['imageTitle'+elemIndx]}</h4>
+                <h4>${elem['imagesTitle'+elemIndx]}</h4>
                 <p>${elem['imagesDesc'+elemIndx]}</p>
                 </div>
                 </div>

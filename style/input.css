@@ -17,11 +17,19 @@
     }
     .first-home-content
     {
-        @apply bg-[url(../images/hero-op2.webp)] bg-cover bg-bottom h-screen snap-start 
+        @apply bg-[url(../images/hero-op2.webp)] bg-no-repeat bg-cover bg-bottom h-screen snap-start 
     }
     .second-home-content
     {
-        @apply text-white h-screen bg-black bg-[url(../images/hero-op1.webp)] bg-bottom snap-start
+        @apply text-white h-screen bg-black bg-[url(../images/hero-op1.webp)] bg-no-repeat bg-bottom bg-cover snap-start
+    }
+    .b-content
+    {
+        @apply  h-[90%] rounded-4xl bg-[#fffff5] shadow-2xl shadow-stone-800 ring
+    }
+    .browse
+    {
+        @apply  bg-[#9EA3AD] snap-y snap-mandatory overflow-x-hidden h-screen 
     }
     /* #name
     {

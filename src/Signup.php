@@ -19,6 +19,9 @@ require_once(__ROOT__.'/src/navbar.php');
                         
                         <label for="email">Email: </label>
                         <input type="email" id="email" name="email" required>
+
+                        <label for="phoneNumber">Phone Number: </label>
+                        <input type="phoneNumber" id="phoneNumber" name="phoneNumber" required>
                         
                         <label for="pswd">Password: </label>
                         <input type="password" id="pswd" name="pswd" required>

@@ -194,6 +194,9 @@
       max-width: 96rem;
     }
   }
+  .mt-\[500px\] {
+    margin-top: 500px;
+  }
   .table {
     display: table;
   }
@@ -202,6 +205,9 @@
   }
   .h-screen {
     height: 100vh;
+  }
+  .min-h-\[fit-content\] {
+    min-height: fit-content;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -251,6 +257,15 @@
   }
   .bg-\[url\(\.\.\/images\/hero-op4\.webp\)\] {
     background-image: url(../images/hero-op4.webp);
+  }
+  .p-16 {
+    padding: calc(var(--spacing) * 16);
+  }
+  .p-\[5rem\] {
+    padding: 5rem;
+  }
+  .p-\[6rem\] {
+    padding: 6rem;
   }
   .text-5xl {
     font-size: var(--text-5xl);

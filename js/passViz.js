@@ -16,7 +16,7 @@ const Confpswd = document.getElementById('confpswd');
             pswdlog.getAttribute('type')==='password'?showHidePass(pswdlog,'text',showlog,'hide'):showHidePass(pswdlog,'password',showlog,'show');
         });
     }
-    else if(Pswd && Confpswd)
+    else
     {
         showsig.addEventListener('click',()=>
         {

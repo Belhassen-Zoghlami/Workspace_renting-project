@@ -436,3 +436,40 @@ background-image: url('../images/wk7.webp');
 {
 background-image: url('../images/hero-op4.webp');
 }
+
+
+
+
+/* Admin worskpace add */
+
+.added
+{
+    padding: 6rem !important;
+    h1,form{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    text-align: center;
+    /* flex-direction: column; */
+    /* gap: 2rem; */
+    form #uploadsec{
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        text-align: center;
+        width: fit-content  ;
+        gap: 0.5rem;
+    }
+
+    
+}
+
+
+/* .added form *
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem; 
+}*/

@@ -77,7 +77,6 @@ for (let obj in list)
 {
     let o=list[obj];
     let DicLength=Object.keys(o).length
-    console.log('dic',obj);
     content=
     `
     <div class="h-screen f-browse snap-start ">
@@ -89,27 +88,13 @@ for (let obj in list)
     `
     for (i=0;i<DicLength-1;i++)
     {
-        console.log(DicLength);
         let elemIndx=i+1;
-        // console.log(Object.keys(o).length);
-        // console.log(o['id'+i]);
-        // console.log('o:',o);
-        // console.log('item',item);
-        console.log(o['elem'+elemIndx]);
+
         let elemDicLength=Object.keys(o['elem1']).length
-        
-        // for(j=0;j<elemDicLength;j++)
-        //     {
                 elem=o['elem'+elemIndx];
-                // indx=j+1;
-                // if(indx===elemDicLength)
-                //     {
-                //             counter=counter+1;
-                //     } 
-                console.log(elem['id'+elemIndx]);
+                content+= (elemIndx===1)?`<input type="radio" name="slide${obj}" id="${elem['id'+elemIndx]}" checked>`:`<input type="radio" name="slide${obj}" id="${elem['id'+elemIndx]}">`;
                 content+=
                 `
-                <input type="radio" name="slide" id="${elem['id'+elemIndx]}">
                 <label for="${elem['id'+elemIndx]}" class="card">
                 <div class="row">
                 <div class="icon">${elemIndx}</div>
@@ -130,17 +115,9 @@ for (let obj in list)
                     </section>
                 </div>
                 `
-                console.log('**********************end**********************');
                 browseContainer.innerHTML+=content;
                 }
                 }
                 
-                // console.log(counter);
-
-    // let item=list[itemidx];
-    // console.log(list[item]);
-
-    // console.log('index: ',itemidx);
-    // console.log('index: ',item);
     
 }

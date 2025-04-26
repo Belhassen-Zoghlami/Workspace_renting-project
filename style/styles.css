@@ -244,12 +244,12 @@ div>.body
     {
         display: none;
     }
-    nav .logo,.body h2{
+.body h2{
         font-size: 7vw;
     }
     .body .logo
     {
-        font-size: 10vw;
+        font-size: clamp(6vw,8vw,9.5vw);
     }   
     .R-L-content form
     {
@@ -268,10 +268,10 @@ div>.body
     } */
 }
 @media  screen and (max-width:600px){
-    nav .logo
+    /* nav .logo
     {
         font-size: 6vw;
-    }
+    } */
     .ct
     {
         padding-top: 4rem;

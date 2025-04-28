@@ -79,7 +79,7 @@ for (let obj in list)
     let DicLength=Object.keys(o).length
     content=
     `
-    <div class="h-screen f-browse snap-start ">
+    <div class="f-browse ">
     <section class="b-content">
     
     <div class="f-wrapper wrapper">

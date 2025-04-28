@@ -1,6 +1,7 @@
 <?php
 if ($_SERVER['REQUEST_METHOD']==='POST'){
-    die($_POST['name']);
+    print_r($_POST);
+    die();
 }
 else{
     print_r('other'.$_SERVER);

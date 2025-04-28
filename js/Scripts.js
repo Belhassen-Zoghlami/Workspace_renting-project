@@ -19,7 +19,7 @@ if(browse)
     }
 
 }
-    nonstickBar && Xdisplay === 'none' && form.style.setProperty('margin-top',eval(navHeight.slice(0,-2)*2)+'px'); //adds padding at the top of the form to avoid collision with nav
+    nonstickBar && form && Xdisplay === 'none' && form.style.setProperty('margin-top',eval(navHeight.slice(0,-2)*2)+'px'); //adds padding at the top of the form to avoid collision with nav
 }
 
 removeNavheight();

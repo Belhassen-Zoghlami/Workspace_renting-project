@@ -15,7 +15,7 @@ if(browse)
 {
     for (let i=0;i<browse.length;i++)
     {
-        browse[i].style.setProperty('padding-top',eval(navHeight.slice(0,-2)*1.5)+'px'); //offsets the div by the height of the nav bar        
+        Xdisplay === 'none' && browse[i].style.setProperty('padding-top',eval(navHeight.slice(0,-2)*2)+'px'); //offsets the div by the height of the nav bar        
     }
 
 }

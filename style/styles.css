@@ -441,7 +441,9 @@ background-image: url('../images/hero-op4.webp');
 
 
 /* Admin worskpace add */
-
+#numberofadds{
+    text-align: center;
+}
 .added
 {
     margin-top: 3rem;

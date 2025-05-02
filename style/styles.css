@@ -6,7 +6,10 @@
     font-style: normal;
 }
   
-
+p.major-regular{
+    display: inline;
+    color: #ffffcb;
+}
 .nunito-200 
 {
 font-family: "Nunito", sans-serif;
@@ -47,12 +50,20 @@ nav,nav *
     position: sticky;
     top: 2rem;
 }
-.smallbar 
+.smallbar
 {
     margin:0 2rem ;
     padding: 1rem;
     display: grid;
     grid-template-columns: repeat(2,1fr) repeat(1,3fr) repeat(2,1fr);
+    height: inherit;
+    font-weight: bold;
+}
+.adminNav{
+    margin:2rem 10rem 0rem 10rem ;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     height: inherit;
     font-weight: bold;
 }
@@ -76,7 +87,7 @@ nav a:not(.logo):hover{
 {
     margin: auto;
 }
-.xpandbar, .smallbar li
+.xpandbar, .smallbar li, .adminNav li
 {
     display: flex;
     justify-content: center;
@@ -358,34 +369,28 @@ div>.body
       background: #223;
       color: white;
       border-radius: 50%;
-      width: 3rem;
+      width: 1.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 1rem;
   }
-  .card > .row > .description
-  {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      overflow: hidden;
-      height: 80px;
-      width:  100%;
-      opacity: 0;
-      transform: translateY(30px);
-      transition-delay: .3s;
-      transition: all .3s ease;
-  }
-  .description p 
+ .browse-text
+ {
+    display:flex;
+    flex-direction:column;
+ }
+  .browse-text p 
   {
     text-shadow:2rem 3rem 4rem #000000;
-      color: rgb(255, 255, 255);
+      color: rgba(39, 39, 39, 0.773);
       padding-top: 5px;
   }
-  .description h4
+  .browse-text h4
   {
+    margin-top: 2rem;
     font-weight: bolder;
+    color: rgba(0, 0, 0, 0.712);
       text-transform: uppercase;
       text-shadow:2rem 3rem 4rem #000000;
   }
@@ -398,44 +403,11 @@ div>.body
 
   }
 
-  .wrapper input:checked + label .description
+  .wrapper input:checked + label .browse-text
   {
       opacity: 1 !important;
       transform: translateY(0) !important;
   }
-.card[for="c1"]
-{
-background-image: url('../images/wk1.webp');
-}
-.card[for="c2"]
-{
-background-image: url('../images/wk2.webp');
-}
-.card[for="c3"]
-{
-background-image: url('../images/wk3.webp');
-
-}
-.card[for="c4"]
-{
-background-image: url('../images/wk4.webp');
-}
-.card[for="c5"]
-{
-background-image: url('../images/wk5.webp');
-}
-.card[for="c6"]
-{
-background-image: url('../images/wk6.webp');
-}
-.card[for="c7"]
-{
-background-image: url('../images/wk7.webp');
-}
-.card[for="c8"]
-{
-background-image: url('../images/hero-op4.webp');
-}
 
 
 

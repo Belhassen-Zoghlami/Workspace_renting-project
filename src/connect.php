@@ -13,7 +13,7 @@ try
 }
 catch(mysqli_sql_exception)
 {
-    echo "<script>alert('Could not connecttttttt!');history.back();</script> ";
+    echo "<script>window.location.href='./login.php';</script> ";
 }
 
 if ($conn)
@@ -23,9 +23,5 @@ if ($conn)
         global $conn;
         return mysqli_query($conn,$query);
     }
-}
-else
-{
-    die('DB error');
 }
 

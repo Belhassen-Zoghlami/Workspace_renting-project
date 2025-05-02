@@ -83,7 +83,12 @@ for (let obj in list)
     <section class="b-content">
     
     <div class="f-wrapper wrapper">
+    <div class="browse-text">
     <h1 class="text-5xl text-black ">${o['title']}: </h1>
+
+                <h4>${o['imagesTitle'+obj]}</h4>
+                <p>${o['imagesDesc'+obj]}</p>
+    </div>
     <div class="container">
     `
     for (i=0;i<DicLength-1;i++)
@@ -98,10 +103,7 @@ for (let obj in list)
                 <label for="${elem['id'+elemIndx]}" class="card">
                 <div class="row">
                 <div class="icon">${elemIndx}</div>
-                <div class="description">
-                <h4>${elem['imagesTitle'+elemIndx]}</h4>
-                <p>${elem['imagesDesc'+elemIndx]}</p>
-                </div>
+
                 </div>
                 </label>
                 `

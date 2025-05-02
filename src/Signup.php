@@ -5,7 +5,7 @@ require_once(__ROOT__.'/src/navbar.php');
 ?>
 
         <section class="first-home-content hidenav-height ct">
-        <div class="home-content reg-log bg-black/55 h-100">
+        <div class="home-content reg reg-log bg-black/55 h-100">
             <main class="R-L-content NavList"> <!--flex justify-center items-center text-[4vw]--> 
                     <form  action="logSignVerf.php" method="POST">
                         <label for="name">First Name: </label>

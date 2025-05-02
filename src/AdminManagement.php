@@ -3,9 +3,9 @@ if ($_SERVER['REQUEST_METHOD']==='POST' && !empty($_POST))
 {
     include('connect.php');
     $counter=0;
-    $singleform=[];
-    $full=[];
-    $targetDir = "C:/xampp/htdocs/JS_PHP_Project/images/";
+    $singleform=[];//list for each workspace
+    $full=[];// list contains the workspace lists
+    $targetDir = "../images/"; 
     $uploadedFileNames = [];
     // print_r($_POST);//for the normal inputs and FILES for the images
     // print_r($_FILES);//for the normal inputs and FILES for the images
@@ -85,10 +85,16 @@ if ($_SERVER['REQUEST_METHOD']==='POST' && !empty($_POST))
                 echo "No file uploaded for '$fileName' or upload error.<br>";
             }
 
-        $sql = "INSERT INTO `workspaces` (`wrkspace_name`, `wrkspace_img_title`, `wrkspace_img_desc`, `wrkspace_img_path1`,  `wrkspace_img_path2`, `wrkspace_img_path3`, `wrkspace_img_path4`,`wrkspace_status`) VALUES ('$obj[0]', '$obj[1]','$obj[2]','$obj[3]','$obj[4]', '$obj[5]', '$obj[6]', '$obj[7]')";
+        }
+        foreach ($full as $key=>$obj)
+        {
 
-        $query = mysqlquery($sql);
-    }
+            $sql = "INSERT INTO `workspaces` (`wrkspace_name`, `wrkspace_img_title`, `wrkspace_img_desc`, `wrkspace_img_path1`,  `wrkspace_img_path2`, `wrkspace_img_path3`, `wrkspace_img_path4`,`wrkspace_status`) VALUES ('$obj[0]', '$obj[1]','$obj[2]','$obj[4]','$obj[5]', '$obj[6]', '$obj[7]', '$obj[3]')";
+    
+            $query = mysqlquery($sql);
+        }
+        header("location: ./Admin.php");
+        exit();
 }
 else
 {

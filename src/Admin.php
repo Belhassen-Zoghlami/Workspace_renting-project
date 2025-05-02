@@ -10,8 +10,20 @@ if(!isset($_SESSION['prio']) || !($_SESSION['prio']==='isAdminPrivMDM') )
 }
 include('connect.php');
 ?>
-<div class="hidenav-height bg-[url(../images/browse1.webp)] min-h-screen h-100% bg-no-repeat bg-cover">
 
+
+
+
+<nav>
+    <ul class="adminNav bg-gray-500/30   backdrop-blur-sm shadow-2xl shadow-stone-800 ring rounded text-shadow-lg/40">
+        <li>Add workspace</li>
+        <li>Remove workspace</li>
+        <li>Update workspace</li>
+        <li>Display Reservation</li>
+    </ul>
+    <!-- AT smaller screens either collapse or change to shorter items -->
+</nav>
+<div class="hidenav-height bg-[url(../images/browse1.webp)] min-h-screen h-100% bg-no-repeat bg-cover">
 
 <main class="ct flex justify-center" style="padding-top:8vh;padding-top:8dvh;">
     <div class="added min-h-[fit-content] b-content text-black bg-[#fffff5]/85">

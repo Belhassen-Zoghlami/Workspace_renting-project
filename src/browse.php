@@ -23,7 +23,7 @@ include('./connect.php');
             <h4><?php echo $row['wrkspace_img_title'];?></h4>
             <p><?php echo $row['wrkspace_img_desc'];?></p>
 <!-- ****************************************************************************** -->
-            <h4> status: <button type="button"><?php echo $row['wrkspace_status']?></button></h4>
+            <h4 class="text-shadow-lg/40" style="color:<?php echo $color=$row['wrkspace_status']=='open'?'green':'oklch(66.6% 0.179 58.318)';?>;"> status: <button type="button"><b><?php echo $row['wrkspace_status'];?></b></button></h4>
 <!-- ****************************************************************************** -->
         </div>
         <div class="container">
@@ -31,28 +31,24 @@ include('./connect.php');
         <input type="radio" name="slide<?php echo $count;?>" id="c<?php echo $count;?>1" checked>
                 <label for="c<?php echo $count;?>1" class="card" style="background-image:url(../images/<?php echo $row['wrkspace_img_path1'];?>)">
                     <div class="row">
-                    <div class="icon">1</div>
 
                     </div>
                 </label>
         <input type="radio" name="slide<?php echo $count;?>" id="c<?php echo $count;?>2" >
                 <label for="c<?php echo $count;?>2" class="card" style="background-image:url(../images/<?php echo $row['wrkspace_img_path2'];?>)">
                     <div class="row">
-                    <div class="icon">2</div>
 
                     </div>
                 </label>
         <input type="radio" name="slide<?php echo $count;?>" id="c<?php echo $count;?>3" >
                 <label for="c<?php echo $count;?>3" class="card" style="background-image:url(../images/<?php echo $row['wrkspace_img_path3'];?>)">
                     <div class="row">
-                    <div class="icon">3</div>
 
                     </div>
                 </label>
         <input type="radio" name="slide<?php echo $count;?>" id="c<?php echo $count;?>4" >
                 <label for="c<?php echo $count;?>4" class="card" style="background-image:url(../images/<?php echo $row['wrkspace_img_path4'];?>)">
                     <div class="row">
-                    <div class="icon">4</div>
 
                     </div>
                 </label>

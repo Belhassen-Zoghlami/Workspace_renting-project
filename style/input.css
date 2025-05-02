@@ -39,13 +39,6 @@
     {
         @apply rounded-md bg-white py-1.5 pr-2 pl-3 text-center text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6 font-bold
     }
-    /* .del
-    {
-        @apply bg-red-500 text-white font-bold ring shadow-2xl shadow-stone-800
-    }
-    .submitForm
-    {
-        @apply font-bold bg-green-600 ring
-    } */
+
 
 }

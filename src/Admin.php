@@ -10,12 +10,21 @@ if(!isset($_SESSION['prio']) || !($_SESSION['prio']==='isAdminPrivMDM') )
 }
 include('connect.php');
 ?>
+<script> document.getElementsByClassName('navybar')[0].classList.add('adminpage')</script>
 
 
 
-
-<nav>
-    <ul class="adminNav bg-gray-500/30   backdrop-blur-sm shadow-2xl shadow-stone-800 ring rounded text-shadow-lg/40">
+<nav class="Adminbar">
+    <ul class="adminNav Admin-smallbar">
+        <li id="down-arrow"><box-icon name="down-arrow-alt" color="white" size="lg" style="width: 4rem; height: 4rem; display: inline-flex; justify-self:center;"></box-icon></li>
+        <li>Add workspace</li>
+        <li>Remove workspace</li>
+        <li>Update workspace</li>
+        <li>Display Reservation</li>
+    </ul>
+    <ul class="adminNav Admin-xpandbar hidenv">
+        <li id="up-arrow"><box-icon name="x" color="white" size="lg" style="width: 4rem; height: 4rem; display: inline-flex; justify-self:center;"></box-icon></li>
+        <!-- <box-icon type='solid' name='x-square'></box-icon> -->
         <li>Add workspace</li>
         <li>Remove workspace</li>
         <li>Update workspace</li>
@@ -126,6 +135,7 @@ include('connect.php');
 </main>
 </div>
 
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 <script src="../js/Scripts.js"></script>
 </body>
 </html>

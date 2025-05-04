@@ -44,6 +44,11 @@ nav,nav *
     position: relative;
     z-index: 100;
 }
+.adminbar,.adminbar *
+{
+    position: relative;
+    z-index:99;
+}
 
 .sticky
 {
@@ -59,13 +64,32 @@ nav,nav *
     height: inherit;
     font-weight: bold;
 }
+/* .Admin-smallbar{
+} */
 .adminNav{
-    margin:2rem 10rem 0rem 10rem ;
+    margin-left:10rem;
+    margin-right:10rem;
+    text-align: center;
     padding: 2rem;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
     height: inherit;
     font-weight: bold;
+    .Admin-smallbar
+    {
+        grid-template-columns: repeat(4,1fr);
+    }
+    .Admin-xpandbar
+    {
+        grid-template-columns: repeat(5,1fr);
+    }
+    li:hover
+    {
+        cursor: pointer;
+    }
+}
+.adminpage
+{
+    padding-bottom:2rem;
 }
 nav a:not(.logo){
     transition: all 0.5s;
@@ -74,7 +98,7 @@ nav a:not(.logo):hover{
     font-size:1.875rem;
     transition: all 0.5s;
 }
-.xpandbar 
+.xpandbar,.Admin-xpandbar
 {
     margin:0 2rem ;
     padding: 1rem;
@@ -83,11 +107,11 @@ nav a:not(.logo):hover{
     height:35vh;
     font-weight: bold;
 }
-.xpandbar li
+.xpandbar li,.Admin-xpandbar li
 {
     margin: auto;
 }
-.xpandbar, .smallbar li, .adminNav li
+.xpandbar, .smallbar li, .Admin-smallbar li .adminNav li, .Admin-xpandbar
 {
     display: flex;
     justify-content: center;
@@ -96,7 +120,7 @@ nav a:not(.logo):hover{
 }
 .R-L-content
 {
-    margin-bottom: 2.5vh;
+    /* margin-bottom: 2.5vh; */
     padding: 1rem;
     /* height: fit-content; */
     width: 40%; 
@@ -111,9 +135,18 @@ nav a:not(.logo):hover{
 {
     height: fit-content;
 } */
-.reg-log
+
+.reg
+{
+    height: fit-content;
+}
+.log
 {
     height: 100vh;
+
+}
+.reg-log
+{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,7 +175,7 @@ nav a:not(.logo):hover{
 {
     font-weight: bold;
     width: fit-content;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
 }
 
 .R-L-content form #sub:hover,#goToSignin:hover,#goToLogin:hover
@@ -159,7 +192,7 @@ input:not(#showpass),button
     background-color: color-mix(in srgb, #000 15%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
     background-color: color-mix(in oklab, var(--color-black) 15%, transparent);
-    padding:.5rem;
+    padding:.2rem;
     }
     border-radius: 0.5rem;
 --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
@@ -245,13 +278,13 @@ div>.body
     }
 }
 @media  screen and (min-width:1101px) {
-    .xpandbar
+    .xpandbar,.Admin-xpandbar
     {
         display: none;
     }
 }
 @media  screen and (max-width:1100px) {
-    .sidenavs a
+    .sidenavs a,.Admin-smallbar li:not(#down-arrow)
     {
         display: none;
     }
@@ -302,7 +335,6 @@ div>.body
           height: 80px;
           transition: all 0.4s ease-in-out;
           border-radius: 2rem;
-          /* background-position: 25% !important; */
         }
       
         /* Reset all cards to base height */
@@ -416,7 +448,7 @@ div>.body
 
   .wrapper
   {
-      padding: 4rem;
+      padding: 1rem;
       display: flex;
       width: 100%;
       height: 100%;
@@ -506,7 +538,6 @@ div>.body
 }
 .added
 {
-    margin-top: 3rem;
     padding: 6rem !important;
     h1,form{
         margin-top: 2rem;

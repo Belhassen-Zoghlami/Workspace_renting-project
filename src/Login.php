@@ -1,10 +1,22 @@
 <?php
 define('__ROOT__', dirname(dirname(__FILE__)));
 require_once(__ROOT__.'/src/navbar.php');
+if (isset($_SESSION['useruid']))
+{
+    if( isset($_SESSION['prio']) && ($_SESSION['prio']==='isAdminPrivMDM') )
+    {
+        header('location: ./Admin.php');
+    }
+    else
+    {
+        header('location: ./Account.php');
+    }
+}
+
 ?>
 
         <section class="second-home-content hidenav-height">
-        <div class="home-content reg-log bg-black/55 h-screen ">
+        <div class="home-content log reg-log bg-black/55 h-screen ">
             <main class="R-L-content NavList"> <!--flex justify-center items-center text-[4vw]--> 
                     <form  action="logSignVerf.php" method="POST">
                         
@@ -12,12 +24,9 @@ require_once(__ROOT__.'/src/navbar.php');
                         <input type="text" id="usrname" name="username" required>
                         
                         <label for="pswd">Password: </label>
-                        <!-- <div>
-                            <input type="password" id="pswdlog" name="pswd" required>
-                            <box-icon name='show' color="white"></box-icon>
-                            </div> -->
 
                         <input type="password" id="pswdlog" name="pswd" required>
+                        <p onclick="console.log('clicked')">forgot password?</p>
                         <box-icon id="showlog" name='show' color="white" size="lg" style="width: 4rem; height: 4rem; display: inline-flex;"></box-icon>
                         <input type="submit" id="sub" name="Signlog" value="Log-in" >
                         <p>Dont have an account?</p>

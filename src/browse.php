@@ -7,6 +7,7 @@ include('./connect.php');
 ?>
 <main id = "Browse-container" class=" browse hidenav-height first-home-content bg-[url(../images/browse1.webp)]">
 <?php 
+
     $sql = "SELECT * FROM `workspaces`";
     $res = mysqlquery($sql);
     $count=0;
@@ -61,6 +62,8 @@ include('./connect.php');
         $count+=1;
         
     }
+
+
 
 
 

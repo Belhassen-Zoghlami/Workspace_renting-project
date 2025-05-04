@@ -1,11 +1,22 @@
 <?php
 define('__ROOT__', dirname(dirname(__FILE__)));
 require_once(__ROOT__.'/src/navbar.php');
+if (isset($_SESSION['useruid']))
+{
+    if( isset($_SESSION['prio']) && ($_SESSION['prio']==='isAdminPrivMDM') )
+    {
+        header('location: ./Admin.php');
+    }
+    else
+    {
 
+        header('location: ./Account.php');
+    }
+}
 ?>
 
-        <section class="first-home-content hidenav-height ct">
-        <div class="home-content reg reg-log bg-black/55 h-100">
+        <section class="first-home-content home-content hidenav-height ct">
+        <div class=" reg reg-log bg-black/55">
             <main class="R-L-content NavList"> <!--flex justify-center items-center text-[4vw]--> 
                     <form  action="logSignVerf.php" method="POST">
                         <label for="name">First Name: </label>

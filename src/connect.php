@@ -13,7 +13,7 @@ try
 }
 catch(mysqli_sql_exception)
 {
-    echo "<script>window.location.href='./login.php';</script> ";
+    echo "<script>window.location.href='./index.php';</script> ";
 }
 
 if ($conn)
@@ -23,5 +23,9 @@ if ($conn)
         global $conn;
         return mysqli_query($conn,$query);
     }
+}
+else
+{
+    header('location: ./index.php');
 }
 

@@ -16,7 +16,8 @@ include('connect.php');
 
 <nav class="Adminbar">
     <ul class="adminNav Admin-smallbar">
-        <li id="down-arrow"><box-icon name="down-arrow-alt" color="white" size="lg" style="width: 4rem; height: 4rem; display: inline-flex; justify-self:center;"></box-icon></li>
+        <li id="down-arrow"><box-icon name="menu" color="white" size="lg" style="width: 4rem; height: 4rem; display: inline-flex; justify-self:center;">Expand</box-icon></li>
+        <!-- <box-icon name='chevron-down'></box-icon> -->
         <li>Add workspace</li>
         <li>Remove workspace</li>
         <li>Update workspace</li>
@@ -24,13 +25,11 @@ include('connect.php');
     </ul>
     <ul class="adminNav Admin-xpandbar hidenv">
         <li id="up-arrow"><box-icon name="x" color="white" size="lg" style="width: 4rem; height: 4rem; display: inline-flex; justify-self:center;"></box-icon></li>
-        <!-- <box-icon type='solid' name='x-square'></box-icon> -->
         <li>Add workspace</li>
         <li>Remove workspace</li>
         <li>Update workspace</li>
         <li>Display Reservation</li>
     </ul>
-    <!-- AT smaller screens either collapse or change to shorter items -->
 </nav>
 <div class="hidenav-height bg-[url(../images/browse1.webp)] min-h-screen h-100% bg-no-repeat bg-cover">
 

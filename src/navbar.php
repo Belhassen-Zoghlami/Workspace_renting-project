@@ -9,7 +9,6 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
@@ -32,14 +31,13 @@
                 <?php 
                     if (isset($_SESSION['useruid']))
                     {
+                        echo "<li class=\"sidenavs\"><a href=\"Admin.php\">Account</a></li>";
                         if( isset($_SESSION['prio']) && ($_SESSION['prio']==='isAdminPrivMDM') )
                         {
-                            echo "<li class=\"sidenavs\"><a href=\"Admin.php\">Account</a></li>";
                             echo "<li class=\"sidenavs\"><a href=\"Logout.php\">Log out</a></li>";
                         }
                         else
                         {
-                            echo "<li class=\"sidenavs\"><a href=\"Account.php\">Account</a></li>";
                             echo "<li class=\"sidenavs\"><a href=\"Logout.php\">Log out</a></li>";
                         }
                     }
@@ -50,8 +48,6 @@
 
                     }
                 ?>
-                <!-- <li class="sidenavs"><a href="Login.php">Account</a></li>
-                <li class="sidenavs"><a href="Signup.php">Sign in</a></li> -->
             </ul>
 
 

@@ -306,17 +306,17 @@ div>.body
         width: 70%; 
 
     }
-    /* .smallbar
+    .Admin-smallbar
     {
-        display: none;
-        } */
+        padding: 0;
+        }
     }
     
     @media (max-width: 1024px) {
         .wrapper {
             padding: 1rem !important;
-            overflow-y: auto; /* allow scrolling if needed */
-            max-height: 100vh; /* limit to viewport height */
+            overflow-y: auto;
+            max-height: 100vh; 
           flex-direction: column;
           align-items: center;
           padding-top: 5rem !important;
@@ -337,12 +337,10 @@ div>.body
           border-radius: 2rem;
         }
       
-        /* Reset all cards to base height */
         .wrapper input + label.card {
           height: 80px;
         }
       
-        /* Expand only the checked card vertically */
         .wrapper input:checked + label.card {
           height: 500px;
         }

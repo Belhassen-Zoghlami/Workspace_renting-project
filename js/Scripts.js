@@ -160,7 +160,7 @@ function smAdmin()
             Adxnav && Adxnav.classList.add('displaynone');
             downarrow && downarrow.classList.add('displaynone');
             smallnav.classList.remove('displaynone');
-            Adsmallnav && smallnav.classList.remove('displaynone');
+            Adsmallnav && Adsmallnav.classList.remove('displaynone');
             
         }
         removeNavheight()

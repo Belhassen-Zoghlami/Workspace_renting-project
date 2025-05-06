@@ -64,14 +64,13 @@ nav,nav *
     height: inherit;
     font-weight: bold;
 }
-/* .Admin-smallbar{
-} */
 .adminNav{
     margin-left:10rem;
     margin-right:10rem;
     text-align: center;
     padding: 2rem;
     display: grid;
+    min-height: 100px;
     height: inherit;
     font-weight: bold;
     .Admin-smallbar
@@ -91,13 +90,15 @@ nav,nav *
 {
     padding-bottom:2rem;
 }
-nav a:not(.logo){
+.navybar a:not(.logo){
     transition: all 0.5s;
 }
-nav a:not(.logo):hover{
+.navybar a:not(.logo):hover{
     font-size:1.875rem;
     transition: all 0.5s;
 }
+
+
 .xpandbar,.Admin-xpandbar
 {
     margin:0 2rem ;
@@ -107,7 +108,7 @@ nav a:not(.logo):hover{
     height:35vh;
     font-weight: bold;
 }
-.xpandbar li,.Admin-xpandbar li
+.xpandbar li
 {
     margin: auto;
 }
@@ -116,7 +117,11 @@ nav a:not(.logo):hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    Admin-xpandbar
+    {
+        justify-content: space-evenly;
 
+    }
 }
 .R-L-content
 {
@@ -531,31 +536,25 @@ div>.body
 
 
 /* Admin worskpace add */
+
+
+#pagination
+{
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+
 #numberofadds{
     text-align: center;
 }
-.added
-{
-    padding: 6rem !important;
-    h1,form{
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        text-align: center;
-    }
-    text-align: center;
-    /* flex-direction: column; */
-    /* gap: 2rem; */
-    form #uploadsec div{
-        display: flex;
-        flex-direction: column;
-        justify-self: center;
-        text-align: center;
-        width: fit-content  ;
-        gap: 0.5rem;
-    }
 
-    
-}
 
 
 .del {
@@ -570,10 +569,11 @@ div>.body
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     --tw-shadow-color: oklch(26.8% 0.007 34.298);
     @supports (color: color-mix(in lab, red, red)) {
-      --tw-shadow-color: color-mix(in oklab, var(--color-stone-800) var(--tw-shadow-alpha), transparent);
+        --tw-shadow-color: color-mix(in oklab, var(--color-stone-800) var(--tw-shadow-alpha), transparent);
     }
-  }
-  .submitForm {
+}
+.submitForm {
+    
     cursor:pointer;
     background-color: var(--color-green-600) !important;
     --tw-font-weight: var(--font-weight-bold);
@@ -585,11 +585,53 @@ div>.body
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     --tw-shadow-color: oklch(26.8% 0.007 34.298);
     @supports (color: color-mix(in lab, red, red)) {
-      --tw-shadow-color: color-mix(in oklab, var(--color-stone-800) var(--tw-shadow-alpha), transparent);
+        --tw-shadow-color: color-mix(in oklab, var(--color-stone-800) var(--tw-shadow-alpha), transparent);
     }
-  }
+    
+}
 
-  select
+select
 {
     padding: 0.5rem;
+}
+
+.added
+{
+    padding: 6rem !important;
+    h1,form{
+        
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    text-align: center;
+    /* flex-direction: column; */
+    /* gap: 2rem; */
+    form #uploadsec div{
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        text-align: center;
+        width: fit-content;
+        gap: 0.5rem;
+        input{
+            padding: .5rem;
+        }
+    }
+    button,input
+    {
+        padding: 0.75rem !important;
+    }
+    
+}
+
+.Admin-smallbar a,.Admin-xpandbar a
+{
+    transition: all 0.5s;
+}
+.Admin-smallbar a:hover,.Admin-xpandbar a:hover
+{
+    font-size:1.2rem !important;
+    transition: all 0.5s;
 }

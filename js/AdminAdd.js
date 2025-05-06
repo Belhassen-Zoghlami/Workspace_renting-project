@@ -1,27 +1,4 @@
 
-   
-    let forms = [];
-    let currentPage = 1;
-    const formsPerPage = 5;
-
-
-    function displayPagination()
-    {
-        const pagin = document.getElementById('pagination');
-        const pagComp = window.getComputedStyle(pagin);
-        const paginDisplay = pagComp.getPropertyValue('display');
-        if (pagin.innerHTML===''){
-            pagin.style.display='none';
-        }
-        else
-        {
-            pagin.style.display='flex';
-        }
-        console.log('here'+pagin.innerHTML+'out');
-    }
-    displayPagination();
-
-
     function deleteForm(el) {
         const formToDel = document.getElementById(el);
         if (formToDel) formToDel.innerHTML = '<br>form deleted<br>';
@@ -31,15 +8,11 @@
         document.getElementById("uploadsec").innerHTML = '';
         document.getElementById("pagination").innerHTML = ''; 
         document.getElementById('numberofadds').value = 0;
-        forms = []; 
-        currentPage = 1;
-        displayPagination();
     }
 
     function formrepea() {
         const addcontainer = document.getElementById('uploadsec');
         const numberForms = parseInt(document.getElementById('numberofadds').value);
-        forms = []; 
         addcontainer.innerHTML = '';
 
         if (numberForms > 0) {
@@ -69,45 +42,6 @@
                 </div>
             `);
         }
-
-        currentPage = 1; 
-        renderPage(currentPage); 
-    }
-
-    
-    function renderPage(page) {
-        const start = (page-1) * formsPerPage;
-        const end = start + formsPerPage;
-        const displayForms = forms.slice(start, end);
-        const container = document.getElementById('uploadsec');
-
-        container.innerHTML = displayForms.join('');
-        renderPagination();
-        getImages(); 
-    }
-
-    function renderPagination() {
-        const totalPages = Math.ceil(forms.length / formsPerPage);
-        const pagination = document.getElementById('pagination');
-        pagination.innerHTML = '';
-
-        if (totalPages <= 1) return;
-
-        if (currentPage > 1) {
-            pagination.innerHTML += `<box-icon type='solid' size="lg" style="width: 2rem; height: 2rem;display:inline-flex;align-items:center;margin-right:.5rem;" color="white" name='skip-previous-circle' onclick="changePage(${currentPage - 1})"></box-icon>`;
-        }
-
-        pagination.innerHTML += `Page ${currentPage} of ${totalPages}`;
-
-        if (currentPage < totalPages) {
-            pagination.innerHTML += `<box-icon type='solid' size="lg" style="width: 2rem; height: 2rem;display:inline-flex;align-items:center;"margin-left:.5rem; color="white" name='skip-next-circle' onclick="changePage(${currentPage + 1})"></box-icon>`;
-        }
-        displayPagination()
-    }
-
-    function changePage(page) {
-        currentPage = page;
-        renderPage(currentPage);
     }
 
     function getImages() {

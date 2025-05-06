@@ -44,5 +44,10 @@
         @apply bg-gray-500/30 backdrop-blur-sm shadow-2xl shadow-stone-800 ring rounded text-shadow-lg/40
     }
 
+    .UPD
+    {
+        @apply backdrop-blur-sm shadow-2xl shadow-stone-800
+    }
+
 
 }

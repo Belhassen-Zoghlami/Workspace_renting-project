@@ -22,7 +22,7 @@ include 'connect.php';
         <a href="?manage=update"><li>Update workspace</li></a>
         <a href="?manage=display"><li>Display Reservation</li></a>
     </ul>
-    <ul class="adminNav Admin-xpandbar hidenv">
+    <ul class="displaynone adminNav Admin-xpandbar hidenv">
         <li id="up-arrow"><box-icon name="x" color="white" size="lg" style="width: 4rem; height: 4rem; display: inline-flex; justify-self:center;"></box-icon></li>
         <a href="?manage=add"><li>Add workspace</li></a>
         <a href="?manage=remove"><li>Remove workspace</li></a>
@@ -37,8 +37,8 @@ include 'connect.php';
         case 'add':
             include './AdminAdd.php'; 
             break;
-        case 'remove':
-            include './AdminRem.php';
+        case 'update':
+            include './AdminUPD.php';
             break;
         default:
             echo'nothing';
@@ -53,6 +53,5 @@ include 'connect.php';
 
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 <script src="../js/Scripts.js"></script>
-<script src="../js/AdminAdd.js"></script>
 </body>
 </html>

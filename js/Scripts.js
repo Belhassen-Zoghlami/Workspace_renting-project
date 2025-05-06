@@ -157,11 +157,11 @@ function smAdmin()
                     Adsmallnav.style.setProperty('grid-template-columns','repeat(4,1fr)')
                 }
             
-            xnav.classList.add('displaynone');
-            Adxnav && Adxnav.classList.add('displaynone');
-            downarrow && downarrow.classList.add('displaynone');
-            smallnav.classList.remove('displaynone');
             Adsmallnav && Adsmallnav.classList.remove('displaynone');
+            smallnav.classList.remove('displaynone');
+            Adxnav && Adxnav.classList.add('displaynone');
+            xnav.classList.add('displaynone');
+            downarrow && downarrow.classList.add('displaynone');
             
         }
         removeNavheight()

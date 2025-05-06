@@ -70,7 +70,7 @@ nav,nav *
     text-align: center;
     padding: 2rem;
     display: grid;
-    min-height: 100px;
+    min-height: 110px;
     height: inherit;
     font-weight: bold;
     .Admin-smallbar
@@ -79,6 +79,7 @@ nav,nav *
     }
     .Admin-xpandbar
     {
+        font-size: 5rem;
         grid-template-columns: repeat(5,1fr);
     }
     li:hover
@@ -117,11 +118,6 @@ nav,nav *
     display: flex;
     justify-content: center;
     align-items: center;
-    Admin-xpandbar
-    {
-        justify-content: space-evenly;
-
-    }
 }
 .R-L-content
 {
@@ -282,12 +278,7 @@ div>.body
         transition: none;
     }
 }
-@media  screen and (min-width:1101px) {
-    .xpandbar,.Admin-xpandbar
-    {
-        display: none;
-    }
-}
+
 @media  screen and (max-width:1100px) {
     .sidenavs a,.Admin-smallbar a
     {
@@ -604,7 +595,10 @@ div>.body
 
 select
 {
-    padding: 0.5rem;
+    margin-top: .2rem;
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    border: solid thin black;
 }
 
 .added
@@ -642,8 +636,84 @@ select
 {
     transition: all 0.5s;
 }
-.Admin-smallbar a:hover,.Admin-xpandbar a:hover
+.Admin-smallbar
+{
+    font-size:1.1rem !important;
+    align-items: center;
+
+}
+.Admin-smallbar a:hover
 {
     font-size:1.2rem !important;
     transition: all 0.5s;
+}
+.Admin-xpandbar a:hover
+{
+    font-size:2rem !important;
+    transition: all 0.5s;
+
+}
+
+.Admin-xpandbar
+{
+    font-size: 1.7rem;
+    justify-content: space-evenly;
+}
+
+@media  screen and (min-width:1101px) {
+    .xpandbar,.Admin-xpandbar
+    {
+        display: none !important;
+    }
+}
+.UPD-ins
+{
+    display:flex;
+    justify-content:center;
+    width:fit-content;
+    gap:1rem;
+    margin:0 auto;
+}
+@media screen and (max-width:1300px)
+{
+    .UPD-ins
+    {
+        flex-direction: column;
+    }
+}
+.showElems
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    width:fit-content;
+    margin:0 auto;
+}
+
+.currHeader
+{
+    border-top:solid thin black;
+    font-size:1.5rem;
+    border-bottom:solid thin black;
+    width:fit-content;
+    margin:1rem auto;
+}
+
+.Img-ins
+{
+    height: 6.5rem;
+    background-size:cover;
+    background-position:center;
+}
+
+
+.UPD
+{
+    background-color: oklch(72.3% 0.219 149.579) !important;
+}
+.UPD:hover
+{
+    cursor: pointer;
+    background-color: oklch(75.3% 0.219 149.579) !important;
+
 }

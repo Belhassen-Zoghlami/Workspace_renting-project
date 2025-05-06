@@ -47,9 +47,13 @@ require_once(__ROOT__.'/src/navbar.php');
                 <section class="bg-black/50 h-screen snap-start body">
 
                     <h2 class="hidenh hero2 text-shadow-lg/40">
-                        Our mission is simple: fuel your productivity while keeping your creativity alive. With intuitive features and seamless access, <p class="major-regular">Worki-n</p> empowers you to do your best work, wherever you are
-                            </h2>
-                            <br><br>
+                        Our mission is simple: fuel your productivity while keeping your creativity alive. 
+                    </h2>
+                    <br><br>
+                    <h2 class="hidenh hero2 text-shadow-lg/40">
+                        With intuitive features and seamless access, <p class="major-regular">Worki-n</p> empowers you to do your best work, wherever you are
+                    </h2>
+                           
                 </section>
             </div>
         </div>

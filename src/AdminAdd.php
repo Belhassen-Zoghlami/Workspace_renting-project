@@ -96,3 +96,4 @@
     </div>
 </main>
 </div>
+<script src="../js/AdminAdd.js"></script>

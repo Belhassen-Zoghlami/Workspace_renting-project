@@ -7,7 +7,6 @@
             browse content management:
         </h1>
         <span>
-        <!-- <button type="button" class="grid w-full cursor-default grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" aria-haspopup="listbox" aria-expanded="true" aria-labelledby="listbox-label"> -->
 
             <input type="number" id="numberofadds" default='1' min="1" max="10" placeholder="0" onchange="formrepea();">
         </span>
@@ -17,12 +16,10 @@
                     {
                         const formToDel = document.getElementById(el);
                         formToDel.innerHTML='<br>form deleted<br>';
-                        // document.getElementById("howmany").value-=1;
                     }
                     function DeleteAllForms()
                     {
                         document.getElementById("uploadsec").innerHTML='';
-                        // document.getElementById("howmany").value=0;
                         document.getElementById('numberofadds').innerHTML=0;
                     }
                 function formrepea()
@@ -35,7 +32,6 @@
                     if(numberForms>0)
                     {
                         content='<button class="del" type="button" name="delAll" onclick="DeleteAllForms()">Delete All</button>'
-                        // content+=`<input name="howmany" id="howmany" value="${numberForms}" hidden>`
                     }
                     for(let i=0;i<numberForms;i++)
                     {

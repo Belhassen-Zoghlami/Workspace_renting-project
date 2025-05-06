@@ -17,7 +17,6 @@ include 'connect.php';
 <nav class="Adminbar">
     <ul class="adminNav Admin-smallbar">
         <li id="down-arrow"><box-icon name="menu" color="white" size="lg" style="width: 4rem; height: 4rem; display: inline-flex; justify-self:center;">Expand</box-icon></li>
-        <!-- <box-icon name='chevron-down'></box-icon> -->
         <a href="?manage=add"><li>Add workspace</li></a>
         <a href="?manage=remove"><li>Remove workspace</li></a>
         <a href="?manage=update"><li>Update workspace</li></a>

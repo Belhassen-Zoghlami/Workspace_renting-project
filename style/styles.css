@@ -289,12 +289,16 @@ div>.body
     }
 }
 @media  screen and (max-width:1100px) {
-    .sidenavs a,.Admin-smallbar li:not(#down-arrow)
+    .sidenavs a,.Admin-smallbar a
     {
         display: none;
     }
     .body h2{
-        font-size: 7vw;
+        font-size:7vw;
+    }
+    .body
+    {
+        gap:2rem;
     }
     .body .logo
     {
@@ -314,6 +318,14 @@ div>.body
     .Admin-smallbar
     {
         padding: 0;
+        }
+    }
+
+
+    @media  screen and (max-width:800px) 
+    {
+        .body h2{
+            font-size: 6vw;
         }
     }
     

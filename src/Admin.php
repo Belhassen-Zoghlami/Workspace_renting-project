@@ -54,5 +54,6 @@ include 'connect.php';
 
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 <script src="../js/Scripts.js"></script>
+<script src="../js/AdminAdd.js"></script>
 </body>
 </html>

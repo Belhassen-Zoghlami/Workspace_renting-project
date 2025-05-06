@@ -53,6 +53,7 @@ function removeNavheight()
         if(adminsbar && AdXdisplay && nonstickBar && AdXdisplay =='none' )
             {
                 nonstickBar.style.setProperty('padding-top',eval(adminHmargin*1.3)+'px');
+
             }
 }
 

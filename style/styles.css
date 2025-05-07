@@ -592,13 +592,18 @@ div>.body
     }
     
 }
-
 select
+{
+    padding: .5rem;
+    border: solid black;
+}
+.UPD-form select
 {
     margin-top: .2rem;
     border-radius: 0.5rem;
     padding: 0.25rem;
-    border: solid thin black;
+    border-width: thin;
+    
 }
 
 .added

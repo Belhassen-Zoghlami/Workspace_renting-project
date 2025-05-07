@@ -21,7 +21,7 @@
         $wk_img4=$row['wrkspace_img_path4'];
         ?>
         <hr>
-        <form action="" method="POST" id="<?php echo $wk_ref;?>" style="font-weight:bold;">
+        <form action="" method="POST" id="<?php echo $wk_ref;?>" class="UPD-form" style="font-weight:bold;">
             <section class="UPD-ins">
 
                 <div class="showElems">

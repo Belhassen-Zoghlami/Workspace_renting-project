@@ -1,6 +1,9 @@
 <div class="hidenav-height bg-[url(../images/browse1.webp)] min-h-screen h-100% bg-no-repeat bg-cover">
 <main class="ct flex justify-center" style="padding-top:8vh;padding-top:8dvh;">
 <div class="added min-h-[fit-content] b-content text-black bg-[#fffff5]/85">
+<h1 class="text-5xl">
+            Update content:
+        </h1>
     <?php
         $sql = "SELECT * FROM `workspaces`";
         $res = mysqlquery($sql);

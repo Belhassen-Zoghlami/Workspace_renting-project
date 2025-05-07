@@ -4,7 +4,7 @@
     <div class="added min-h-[fit-content] b-content text-black bg-[#fffff5]/85">
 
         <h1 class="text-5xl">
-            browse content management:
+            Add content:
         </h1>
         <span>
 

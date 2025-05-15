@@ -44,6 +44,9 @@ if(!isset($_GET['manage']))
         case 'update':
             include './AdminUPD.php';
             break;
+        case 'remove':
+            include './AdminRem.php';
+            break;
         default:
             ?>
             <div class="hidenav-height bg-[url(../images/browse1.webp)] min-h-screen h-100% bg-no-repeat bg-cover">

@@ -188,7 +188,7 @@ nav,nav *
       transition: all 0.5s;
     }
 }
-input:not(#showpass),button
+input:not(#showpass),button:not(.reserve)
 {
     background-color: color-mix(in srgb, #000 15%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -199,6 +199,24 @@ input:not(#showpass),button
 --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
 }
+.reserve
+{
+    margin:2rem 0 0.5rem 0;
+    width: fit-content;
+    padding:0.5rem 1rem;
+    background-color: green;
+    border-radius: 0.5rem;
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    
+}
+
+.reserve:hover
+{
+    background-color: rgb(23, 133, 23);
+}
+
+
 #showlog,#showsign
 {
     cursor: pointer;
@@ -511,6 +529,7 @@ div>.body
     text-shadow:2rem 3rem 4rem #000000;
       color: rgba(39, 39, 39, 0.773);
       padding-top: 5px;
+      overflow: auto;
   }
   .browse-text h4
   {
@@ -560,9 +579,10 @@ div>.body
 
 
 
-.del {
+.del 
+{
     cursor:pointer;
-    background-color: var(--color-red-500);
+    background-color: oklch(63.7% 0.237 25.331);
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
     color: var(--color-white);
@@ -635,6 +655,11 @@ select
         padding: 0.75rem !important;
     }
     
+}
+
+button
+{
+    cursor: pointer;
 }
 
 .Admin-smallbar a,.Admin-xpandbar a
@@ -721,4 +746,22 @@ select
     cursor: pointer;
     background-color: oklch(75.3% 0.219 149.579) !important;
 
+}
+
+
+.delete
+{
+    cursor:pointer;
+    background-color: oklch(63.7% 0.237 25.331);
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    --tw-shadow-color: oklch(26.8% 0.007 34.298);
+    @supports (color: color-mix(in lab, red, red)) {
+        --tw-shadow-color: color-mix(in oklab, var(--color-stone-800) var(--tw-shadow-alpha), transparent);
+    }
 }

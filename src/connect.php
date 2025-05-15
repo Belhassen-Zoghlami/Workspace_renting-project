@@ -13,7 +13,8 @@ try
 }
 catch(mysqli_sql_exception)
 {
-    echo "<script>window.location.href='./index.php';</script> ";
+    header('location: ./ConError.php');
+
 }
 
 if ($conn)

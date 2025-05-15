@@ -24,7 +24,20 @@ include('./connect.php');
             <h4><?php echo $row['wrkspace_img_title'];?></h4>
             <p><?php echo $row['wrkspace_img_desc'];?></p>
 <!-- ****************************************************************************** -->
-            <h4 class="text-shadow-lg/40" style="color:<?php echo $color=$row['wrkspace_status']=='open'?'green':'oklch(66.6% 0.179 58.318)';?>;"> status: <button type="button"><b><?php echo $row['wrkspace_status'];?></b></button></h4>
+            <h4 class="text-shadow-lg/40" style="color:<?php echo $color=$row['wrkspace_status']=='open'?'oklch(0.56 0.1768 156.71)':'oklch(46.6% 0.579 58.318)';?>;"> status: <button type="button" style="width:71px;"><b><?php echo $row['wrkspace_status'];?></b></button></h4>
+            <?php 
+            if($row['wrkspace_status']=='open')
+            {
+                ?> 
+                <form action="./ConError.php" method="POST" style="width:fit-content;margin:0 auto;">
+                <button class="nunito-200 reserve">
+                    <b>Place Reservation</b>
+                </button>
+                </form>
+                <?php
+                
+            }
+            ?>
 <!-- ****************************************************************************** -->
         </div>
         <div class="container">

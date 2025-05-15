@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST' && !empty($_POST))
             exit();
         }
         else
-        { 
+        {
             if ($counter<3)
             {
                 echo $obj;
@@ -50,7 +50,8 @@ if ($_SERVER['REQUEST_METHOD']==='POST' && !empty($_POST))
     foreach($imglist as $key)
     {
 
-            if (isset($_FILES[$key]) && $_FILES[$key]['error'] === UPLOAD_ERR_OK) {
+            if (isset($_FILES[$key]) && $_FILES[$key]['error'] === UPLOAD_ERR_OK) 
+            {
                 $fileTmpPath = $_FILES[$key]['tmp_name'];
                 $fileName = basename($_FILES[$key]['name']);
                 $fileType = mime_content_type($fileTmpPath);
@@ -81,7 +82,9 @@ if ($_SERVER['REQUEST_METHOD']==='POST' && !empty($_POST))
                 } else {
                     echo "File '$fileName' is not an image.<br>";
                 }
-            } else {
+            } 
+            else 
+            {
                 echo "No file uploaded for '$fileName' or upload error.<br>";
             }
 

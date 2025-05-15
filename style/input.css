@@ -48,6 +48,9 @@
     {
         @apply backdrop-blur-sm shadow-2xl shadow-stone-800
     }
-
+    .cancel
+    {
+        @apply w-[91px] px-5 py-2 rounded-lg bg-red-500 hover:bg-red-400 text-gray-700
+    }
 
 }

@@ -177,9 +177,6 @@
   }
 }
 @layer utilities {
-  .collapse {
-    visibility: collapse;
-  }
   .static {
     position: static;
   }
@@ -207,9 +204,6 @@
   .flex {
     display: flex;
   }
-  .grid {
-    display: grid;
-  }
   .h-screen {
     height: 100vh;
   }
@@ -219,29 +213,17 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-full {
-    width: 100%;
-  }
-  .cursor-default {
-    cursor: default;
-  }
   .resize {
     resize: both;
   }
   .snap-start {
     scroll-snap-align: start;
   }
-  .grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
   .items-center {
     align-items: center;
   }
   .justify-center {
     justify-content: center;
-  }
-  .rounded-md {
-    border-radius: var(--radius-md);
   }
   .bg-\[\#fffff5\]\/85 {
     background-color: color-mix(in oklab, #fffff5 85%, transparent);
@@ -258,9 +240,6 @@
       background-color: color-mix(in oklab, var(--color-black) 55%, transparent);
     }
   }
-  .bg-white {
-    background-color: var(--color-white);
-  }
   .bg-\[url\(\.\.\/images\/browse1\.webp\)\] {
     background-image: url(../images/browse1.webp);
   }
@@ -276,18 +255,6 @@
   .bg-no-repeat {
     background-repeat: no-repeat;
   }
-  .py-1\.5 {
-    padding-block: calc(var(--spacing) * 1.5);
-  }
-  .pr-2 {
-    padding-right: calc(var(--spacing) * 2);
-  }
-  .pl-3 {
-    padding-left: calc(var(--spacing) * 3);
-  }
-  .text-left {
-    text-align: left;
-  }
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
@@ -295,21 +262,8 @@
   .text-black {
     color: var(--color-black);
   }
-  .text-gray-900 {
-    color: var(--color-gray-900);
-  }
   .lowercase {
     text-transform: lowercase;
-  }
-  .outline-1 {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
-  .-outline-offset-1 {
-    outline-offset: calc(1px * -1);
-  }
-  .outline-gray-300 {
-    outline-color: var(--color-gray-300);
   }
   .text-shadow-lg\/40 {
     --tw-text-shadow-alpha: 40%;
@@ -318,28 +272,6 @@
   .text-shadow-lg\/70 {
     --tw-text-shadow-alpha: 70%;
     text-shadow: 0px 1px 2px var(--tw-text-shadow-color, oklab(from rgb(0 0 0 / 0.1) l a b / 70%)), 0px 3px 2px var(--tw-text-shadow-color, oklab(from rgb(0 0 0 / 0.1) l a b / 70%)), 0px 4px 8px var(--tw-text-shadow-color, oklab(from rgb(0 0 0 / 0.1) l a b / 70%));
-  }
-  .focus\:outline-2 {
-    &:focus {
-      outline-style: var(--tw-outline-style);
-      outline-width: 2px;
-    }
-  }
-  .focus\:-outline-offset-2 {
-    &:focus {
-      outline-offset: calc(2px * -1);
-    }
-  }
-  .focus\:outline-indigo-600 {
-    &:focus {
-      outline-color: var(--color-indigo-600);
-    }
-  }
-  .sm\:text-sm\/6 {
-    @media (width >= 40rem) {
-      font-size: var(--text-sm);
-      line-height: calc(var(--spacing) * 6);
-    }
   }
 }
 @layer components {
@@ -486,11 +418,6 @@
     --tw-text-shadow-alpha: 40%;
     text-shadow: 0px 1px 2px var(--tw-text-shadow-color, oklab(from rgb(0 0 0 / 0.1) l a b / 40%)), 0px 3px 2px var(--tw-text-shadow-color, oklab(from rgb(0 0 0 / 0.1) l a b / 40%)), 0px 4px 8px var(--tw-text-shadow-color, oklab(from rgb(0 0 0 / 0.1) l a b / 40%));
   }
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-text-shadow-color {
   syntax: "*";
@@ -653,10 +580,14 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-outline-style: solid;
       --tw-text-shadow-color: initial;
       --tw-text-shadow-alpha: 100%;
       --tw-gradient-position: initial;
@@ -693,6 +624,7 @@
       --tw-backdrop-sepia: initial;
       --tw-scroll-snap-strictness: proximity;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
     }
   }
 }

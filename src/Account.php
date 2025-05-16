@@ -13,10 +13,7 @@ $rest=mysqlquery($sql);
 
 $rowresv=$rest -> fetch_all(MYSQLI_ASSOC);
 // print_r($rowresv);
-$reservations = [
-    ['id' => 101, 'item' => 'Room 204', 'date' => '2025-06-01'],
-    ['id' => 102, 'item' => 'Conference Hall', 'date' => '2025-06-10'],
-];
+
 
 
 
@@ -45,7 +42,6 @@ $reservations = [
                 <button class="accent-button reserve" onclick="toggleEdit()">Edit</button>
             </div>
 
-            <!-- Static User Info -->
             <div class="user-info" class="hiddenn" id="view-info">
                 <div><strong>Username:</strong> <?= htmlspecialchars($rowuser['username']) ?></div>
                 <div><strong>Email:</strong> <?= htmlspecialchars($rowuser['email']) ?></div>

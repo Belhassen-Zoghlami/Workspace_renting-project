@@ -73,14 +73,12 @@ include('./connect.php');
                     {
                         $sql = "UPDATE `workspaces` SET `wrkspace_status`= 'open' WHERE `wrkspace_ref`=".$row['wrkspace_ref'];
                         $res=mysqlquery($sql);
-                        header('refresh:0');
                     }
                 }
                 else
                 {
                         $sql = "UPDATE `workspaces` SET `wrkspace_status`= 'open' WHERE `wrkspace_ref`=".$row['wrkspace_ref'];
                         $res=mysqlquery($sql);
-                        header('refresh:0');
 
                 }
             }

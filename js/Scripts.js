@@ -15,7 +15,8 @@ function removeNavheight()
     const browse =document.getElementsByClassName('f-browse'); // gets needed div by its class name
     const adminsbar =document.getElementsByClassName('Admin-smallbar')[0]; //gets the nav bar by class name
     const adminbar =document.getElementsByClassName('Adminbar')[0]; //gets the nav bar by class name
-
+    const cont =document.getElementsByClassName('ovrview')[0]; //gets the nav bar by class name
+    
     const computedStyle = window.getComputedStyle(navy); // gets all styles for the nav bar 
     const XcomputedStyle = window.getComputedStyle(xpand); // gets all styles for the nav bar 
     if(Adxpand)
@@ -43,6 +44,11 @@ function removeNavheight()
             {
                 reg.style.setProperty('padding-top',eval(navHeight)+'px');
                 reg.style.setProperty('padding-bottom',eval(navHeight)+'px');
+            }
+        if(cont && Xdisplay === 'none')
+            {
+                cont.style.setProperty('padding-top',eval(navHeight*1.01)+'px');
+                // cont.style.setProperty('padding-bottom',eval(navHeight)+'px');
             }
         if(log && Xdisplay === 'none') 
             {

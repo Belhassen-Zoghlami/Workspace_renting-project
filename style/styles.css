@@ -1,7 +1,6 @@
 @import "tailwindcss";
 a
 {
-    color: white;
     text-decoration: none;
 }
 .major-regular
@@ -228,7 +227,7 @@ input:not(#showpass),button:not(.reserve)
 }
 .free-date
 {
-    margin:2rem 0 0.5rem 0;
+    margin:2rem auto 0.5rem auto;
     width: fit-content;
     padding:0.5rem 1rem !important;
 }
@@ -258,7 +257,7 @@ div>.body
 
 .logo
 {
-    font-size: 3.5vw;
+    font-size: 4.5vw;
 }
 
 .body .logo{
@@ -316,6 +315,10 @@ div>.body
 }
 
 @media  screen and (max-width:1100px) {
+    nav .logo
+    {
+        font-size: 6.5vw;
+    }
     .sidenavs a,.Admin-smallbar a
     {
         display: none;
@@ -345,7 +348,11 @@ div>.body
     .Admin-smallbar
     {
         padding: 0;
-        }
+    }
+    .smallbar
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
     }
 
 
@@ -600,7 +607,7 @@ div>.body
 .del 
 {
     cursor:pointer;
-    background-color: oklch(63.7% 0.237 25.331);
+    background-color: oklch(63.7% 0.237 25.331) !important;
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
     color: var(--color-white);
@@ -770,7 +777,7 @@ button:not(.free-date)
 .delete
 {
     cursor:pointer;
-    background-color: oklch(63.7% 0.237 25.331);
+    background-color: oklch(63.7% 0.237 25.331) !important;
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
     color: var(--color-white);
@@ -796,3 +803,5 @@ button:not(.free-date)
     gap: 1rem;
     margin: .5rem;
 }
+
+

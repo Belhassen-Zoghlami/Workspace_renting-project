@@ -23,7 +23,7 @@
 
     <body class=" h-screen nunito-200"></body>
 <nav class="navybar">
-            <ul class="NavList smallbar nunito-200 hidenv">
+            <ul class="NavList nv smallbar nunito-200 hidenv">
                 <li class="sidenavs"><a href="index.php">Home</a></li>
                 <li class="sidenavs"><a href="browse.php">Browse</a></li>
                 <li >
@@ -32,13 +32,15 @@
                 <?php 
                     if (isset($_SESSION['useruid']))
                     {
-                        echo "<li class=\"sidenavs\"><a href=\"Admin.php\">Account</a></li>";
-                        if( isset($_SESSION['prio']) && ($_SESSION['prio']==='isAdminPrivMDM') )
+                        if( isset($_SESSION['prio']) && ($_SESSION['prio']==='isAdminPrivMDM')  )
                         {
+                            echo "<li class=\"sidenavs\"><a href=\"Admin.php\">Account</a></li>";
                             echo "<li class=\"sidenavs\"><a href=\"Logout.php\">Log out</a></li>";
+        
                         }
                         else
                         {
+                            echo "<li class=\"sidenavs\"><a href=\"Account.php\">Account</a></li>";
                             echo "<li class=\"sidenavs\"><a href=\"Logout.php\">Log out</a></li>";
                         }
                     }
@@ -52,7 +54,7 @@
             </ul>
 
 
-            <ul class="NavList xpandbar nunito-200 hidenv">
+            <ul class="NavList nv xpandbar nunito-200 hidenv">
             <li >
                     <h1 ><a id='logoxp' class="logo major-regular" href="#">Worki-n</a></h1>
                 </li>  

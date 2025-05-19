@@ -7,32 +7,54 @@
     {
         @apply text-2xl text-white bg-black/10 backdrop-blur-sm shadow-2xl shadow-stone-800 ring rounded text-shadow-lg/40 bg-linear-to-br to-stone-400
     }
+    .NavAcc
+    {
+        @apply text-white text-2xl bg-black/4 backdrop-blur-sm shadow-2xl ring-stone-600 rounded text-shadow-lg/80 
+    }
     .logo
     {
-        @apply text-[#ffffcb] text-shadow-lg/40
+        @apply text-[#ffffcb] text-shadow-lg/80
     }
     .home-content 
     {
-        @apply  snap-y snap-mandatory overflow-scroll h-screen
+        @apply  snap-y snap-mandatory overflow-scroll h-screen h-[100dvh]
     }
     .first-home-content
     {
-        @apply bg-[url(../images/hero-op2.webp)] bg-no-repeat bg-cover bg-bottom h-screen snap-start 
+        @apply bg-[url(../images/hero-op2.webp)] bg-no-repeat bg-cover bg-bottom h-screen h-[100dvh] snap-start 
     }
     .second-home-content
     {
-        @apply text-white h-screen bg-black bg-[url(../images/hero-op1.webp)] bg-no-repeat bg-bottom bg-cover snap-start
+        @apply text-white h-screen h-[100dvh] bg-black bg-[url(../images/hero-op1.webp)] bg-no-repeat bg-bottom bg-cover snap-start
     }
     .b-content
     {
-        @apply  h-[90%] rounded-4xl bg-[#fffff5] shadow-2xl shadow-stone-800 ring
+        @apply  h-[90%] w-[97%] rounded-4xl bg-white/55 shadow-2xl shadow-stone-800 ring 
     }
     .browse
     {
-        @apply  bg-[#9EA3AD] snap-y snap-mandatory overflow-x-hidden h-screen 
+        @apply  bg-[#9EA3AD] snap-y snap-mandatory overflow-x-hidden h-screen h-[100dvh]
     }
-    /* #name
+    .f-browse
     {
-        @apply ring rounded bg-black/55
-    } */
+        @apply snap-start flex justify-center h-screen h-[100dvh]
+    }
+    .selectStatus
+    {
+        @apply rounded-md bg-white py-1.5 pr-2 pl-3 text-center text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6 font-bold
+    }
+    .adminNav
+    {
+        @apply bg-gray-500/30 backdrop-blur-sm shadow-2xl shadow-stone-800 ring rounded text-shadow-lg/40
+    }
+
+    .UPD
+    {
+        @apply backdrop-blur-sm shadow-2xl shadow-stone-800
+    }
+    .cancel
+    {
+        @apply w-[91px] px-5 py-2 rounded-lg bg-red-500 hover:bg-red-400 text-gray-700
+    }
+
 }

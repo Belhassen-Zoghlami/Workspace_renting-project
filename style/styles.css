@@ -1,4 +1,8 @@
 @import "tailwindcss";
+a
+{
+    text-decoration: none;
+}
 .major-regular
 {
     font-family: "Major Mono Display", monospace;
@@ -6,7 +10,10 @@
     font-style: normal;
 }
   
-
+p.major-regular{
+    display: inline;
+    color: #ffffcb;
+}
 .nunito-200 
 {
 font-family: "Nunito", sans-serif;
@@ -36,10 +43,15 @@ body
     background-color: #9EA3AD;
 }
 
-nav *
+nav,nav *
 {
     position: relative;
-    z-index: 10000;
+    z-index: 100;
+}
+.adminbar,.adminbar *
+{
+    position: relative;
+    z-index:99;
 }
 
 .sticky
@@ -47,7 +59,7 @@ nav *
     position: sticky;
     top: 2rem;
 }
-.smallbar 
+.smallbar
 {
     margin:0 2rem ;
     padding: 1rem;
@@ -56,14 +68,43 @@ nav *
     height: inherit;
     font-weight: bold;
 }
-nav a:not(.logo){
+.adminNav{
+    margin-left:10rem;
+    margin-right:10rem;
+    text-align: center;
+    padding: 2rem;
+    display: grid;
+    min-height: 110px;
+    height: inherit;
+    font-weight: bold;
+    .Admin-smallbar
+    {
+        grid-template-columns: repeat(4,1fr);
+    }
+    .Admin-xpandbar
+    {
+        font-size: 5rem;
+        grid-template-columns: repeat(5,1fr);
+    }
+    li:hover
+    {
+        cursor: pointer;
+    }
+}
+.adminpage
+{
+    padding-bottom:2rem;
+}
+.navybar a:not(.logo){
     transition: all 0.5s;
 }
-nav a:not(.logo):hover{
+.navybar a:not(.logo):hover{
     font-size:1.875rem;
     transition: all 0.5s;
 }
-.xpandbar 
+
+
+.xpandbar,.Admin-xpandbar
 {
     margin:0 2rem ;
     padding: 1rem;
@@ -76,16 +117,15 @@ nav a:not(.logo):hover{
 {
     margin: auto;
 }
-.xpandbar, .smallbar li
+.xpandbar, .smallbar li, .Admin-smallbar li .adminNav li, .Admin-xpandbar
 {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .R-L-content
 {
-    margin-bottom: 2.5vh;
+    /* margin-bottom: 2.5vh; */
     padding: 1rem;
     /* height: fit-content; */
     width: 40%; 
@@ -100,9 +140,18 @@ nav a:not(.logo):hover{
 {
     height: fit-content;
 } */
-.reg-log
+
+.reg
+{
+    height: fit-content;
+}
+.log
 {
     height: 100vh;
+
+}
+.reg-log
+{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,7 +180,7 @@ nav a:not(.logo):hover{
 {
     font-weight: bold;
     width: fit-content;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
 }
 
 .R-L-content form #sub:hover,#goToSignin:hover,#goToLogin:hover
@@ -143,17 +192,48 @@ nav a:not(.logo):hover{
       transition: all 0.5s;
     }
 }
-input:not(#showpass),button
+input:not(#showpass),button:not(.reserve)
 {
     background-color: color-mix(in srgb, #000 15%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
     background-color: color-mix(in oklab, var(--color-black) 15%, transparent);
-    padding:.5rem;
+    padding:.2rem;
     }
     border-radius: 0.5rem;
 --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
 }
+.reserve
+{
+    color: white !important;
+    font-weight: bold;
+    margin:2rem 0 0.5rem 0;
+    width: fit-content;
+    padding:0.5rem 1rem;
+    background-color: green;
+    border-radius: 0.5rem;
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+
+    
+}
+.reserve     a{
+        color: white !important;
+    }
+
+.reserve:hover
+{
+    background-color: rgb(23, 133, 23);
+}
+.free-date
+{
+    margin:2rem auto 0.5rem auto;
+    width: fit-content;
+    padding:0.5rem 1rem !important;
+}
+
+
+
 #showlog,#showsign
 {
     cursor: pointer;
@@ -177,7 +257,7 @@ div>.body
 
 .logo
 {
-    font-size: 3.5vw;
+    font-size: 4.5vw;
 }
 
 .body .logo{
@@ -233,44 +313,144 @@ div>.body
         transition: none;
     }
 }
-@media  screen and (min-width:1101px) {
-    .xpandbar
-    {
-        display: none;
-    }
-}
+
 @media  screen and (max-width:1100px) {
-      .sidenavs a
+    nav .logo
+    {
+        font-size: 6.5vw;
+    }
+    .sidenavs a,.Admin-smallbar a
     {
         display: none;
     }
-    nav .logo,.body h2{
-        font-size: 7vw;
+    .body h2{
+        font-size:7vw;
+    }
+    .body
+    {
+        gap:2rem;
     }
     .body .logo
     {
-        font-size: 10vw;
+        font-size: 8vw;
     }   
     .R-L-content form
     {
         font-size: 1.5rem;
     }
     .R-L-content
-{
-    padding: 1rem;
-    height: fit-content;
-    width: 70%; 
-
-}
-    /* .smallbar
     {
-        display: none;
-    } */
-}
+        padding: 1rem;
+        height: fit-content;
+        width: 70%; 
+
+    }
+    .Admin-smallbar
+    {
+        padding: 0;
+    }
+    .smallbar
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    }
+
+
+    @media  screen and (max-width:800px) 
+    {
+        .body h2{
+            font-size: 6vw;
+        }
+    }
+    
+    @media (max-width: 1024px) {
+        .wrapper {
+            padding: 1rem !important;
+            overflow-y: auto;
+            max-height: 100vh; 
+          flex-direction: column;
+          align-items: center;
+          padding-top: 5rem !important;
+        }
+      
+        .container {
+          flex-direction: column;
+          align-items: center;
+          height: auto;
+          width: 100%;
+          gap: 1rem;
+        }
+      
+        .card {
+          width: 100%;
+          height: 80px;
+          transition: all 0.4s ease-in-out;
+          border-radius: 2rem;
+        }
+      
+        .wrapper input + label.card {
+          height: 80px;
+        }
+      
+        .wrapper input:checked + label.card {
+          height: 500px;
+        }
+      
+        .browse-text {
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+      }
+      
+      
+      @media (max-width: 600px) {
+        .card {
+          width: 100%;
+          border-radius: 1rem;
+        }
+      
+        .browse-text h1 {
+          font-size: 1.8rem;
+        }
+      
+        .browse-text h4, .browse-text p {
+          font-size: 1rem;
+        }
+      }
+      
+  @media (max-width: 768px) {
+    .card {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      width: 100%;
+      border-radius: 1rem;
+    }
+  
+    .browse-text h1 {
+      font-size: 2rem;
+    }
+  
+    .browse-text h4 {
+      font-size: 1rem;
+    }
+  
+    .browse-text p {
+      font-size: 0.9rem;
+    }
+  
+    .wrapper {
+      padding: 1rem;
+    }
+  }
+  
 @media  screen and (max-width:600px){
     nav .logo
     {
-        font-size: 6vw;
+        font-size: 5vw;
     }
     .ct
     {
@@ -317,9 +497,8 @@ div>.body
 
   .wrapper
   {
-      padding: 4rem;
+      padding: 1rem;
       display: flex;
-
       width: 100%;
       height: 100%;
       align-items: center;    
@@ -352,40 +531,36 @@ div>.body
       color: white;
       display: flex;
       flex-wrap: nowrap;
+      color: oklch(47.3% 0.137 46.201) ;
   }
   .card > .row > .icon
   {
       background: #223;
       color: white;
       border-radius: 50%;
-      width: 3rem;
+      width: 1.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 1rem;
   }
-  .card > .row > .description
-  {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      overflow: hidden;
-      height: 80px;
-      width:  100%;
-      opacity: 0;
-      transform: translateY(30px);
-      transition-delay: .3s;
-      transition: all .3s ease;
-  }
-  .description p 
+ .browse-text
+ {
+    display:flex;
+    flex-direction:column;
+ }
+  .browse-text p 
   {
     text-shadow:2rem 3rem 4rem #000000;
-      color: rgb(255, 255, 255);
+      color: rgba(39, 39, 39, 0.773);
       padding-top: 5px;
+      overflow: auto;
   }
-  .description h4
+  .browse-text h4
   {
+    margin-top: 2rem;
     font-weight: bolder;
+    color: rgba(0, 0, 0, 0.712);
       text-transform: uppercase;
       text-shadow:2rem 3rem 4rem #000000;
   }
@@ -398,41 +573,235 @@ div>.body
 
   }
 
-  .wrapper input:checked + label .description
+  .wrapper input:checked + label .browse-text
   {
       opacity: 1 !important;
       transform: translateY(0) !important;
   }
-.card[for="c1"]
+
+
+
+
+/* Admin worskpace add */
+
+
+#pagination
 {
-background-image: url('../images/wk1.webp');
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 1rem;
 }
-.card[for="c2"]
-{
-background-image: url('../images/wk2.webp');
+
+
+#numberofadds{
+    text-align: center;
 }
-.card[for="c3"]
+
+
+
+.del 
 {
-background-image: url('../images/wk3.webp');
+    cursor:pointer;
+    background-color: oklch(63.7% 0.237 25.331) !important;
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    --tw-shadow-color: oklch(26.8% 0.007 34.298);
+    @supports (color: color-mix(in lab, red, red)) {
+        --tw-shadow-color: color-mix(in oklab, var(--color-stone-800) var(--tw-shadow-alpha), transparent);
+    }
+}
+.submitForm {
+    
+    cursor:pointer;
+    background-color: var(--color-green-600) !important;
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    --tw-shadow-color: oklch(26.8% 0.007 34.298);
+    @supports (color: color-mix(in lab, red, red)) {
+        --tw-shadow-color: color-mix(in oklab, var(--color-stone-800) var(--tw-shadow-alpha), transparent);
+    }
+    
+}
+select
+{
+    padding: .5rem;
+    border: solid black;
+}
+.UPD-form select
+{
+    margin-top: .2rem;
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    border-width: thin;
+    
+}
+
+.added
+{
+    padding: 6rem !important;
+    h1,form{
+        
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    text-align: center;
+    /* flex-direction: column; */
+    /* gap: 2rem; */
+    form #uploadsec div{
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        text-align: center;
+        width: fit-content;
+        gap: 0.5rem;
+        input{
+            padding: .5rem;
+        }
+    }
+    button,input
+    {
+        padding: 0.75rem !important;
+    }
+    
+}
+
+button:not(.free-date)
+{
+    cursor: pointer;
+}
+
+.Admin-smallbar a,.Admin-xpandbar a
+{
+    transition: all 0.5s;
+}
+.Admin-smallbar
+{
+    font-size:1.1rem !important;
+    align-items: center;
 
 }
-.card[for="c4"]
+.Admin-smallbar a:hover
 {
-background-image: url('../images/wk4.webp');
+    font-size:1.2rem !important;
+    transition: all 0.5s;
 }
-.card[for="c5"]
+.Admin-xpandbar a:hover
 {
-background-image: url('../images/wk5.webp');
+    font-size:2rem !important;
+    transition: all 0.5s;
+
 }
-.card[for="c6"]
+
+.Admin-xpandbar
 {
-background-image: url('../images/wk6.webp');
+    font-size: 1.7rem;
+    justify-content: space-evenly;
 }
-.card[for="c7"]
+
+@media  screen and (min-width:1101px) {
+    .xpandbar,.Admin-xpandbar
+    {
+        display: none !important;
+    }
+}
+.UPD-ins
 {
-background-image: url('../images/wk7.webp');
+    display:flex;
+    justify-content:center;
+    width:fit-content;
+    gap:1rem;
+    margin:0 auto;
 }
-.card[for="c8"]
+@media screen and (max-width:1300px)
 {
-background-image: url('../images/hero-op4.webp');
+    .UPD-ins
+    {
+        flex-direction: column;
+    }
 }
+.showElems
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    width:fit-content;
+    margin:0 auto;
+}
+
+.currHeader
+{
+    border-top:solid thin black;
+    font-size:1.5rem;
+    border-bottom:solid thin black;
+    width:fit-content;
+    margin:1rem auto;
+}
+
+.Img-ins
+{
+    height: 6.5rem;
+    background-size:cover;
+    background-position:center;
+}
+
+
+.UPD
+{
+    background-color: oklch(72.3% 0.219 149.579) !important;
+}
+.UPD:hover
+{
+    cursor: pointer;
+    background-color: oklch(75.3% 0.219 149.579) !important;
+
+}
+
+
+.delete
+{
+    cursor:pointer;
+    background-color: oklch(63.7% 0.237 25.331) !important;
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    --tw-shadow-color: oklch(26.8% 0.007 34.298);
+    @supports (color: color-mix(in lab, red, red)) {
+        --tw-shadow-color: color-mix(in oklab, var(--color-stone-800) var(--tw-shadow-alpha), transparent);
+    }
+}
+
+
+.razer
+{
+    width: fit-content;
+    padding: 2rem;
+}
+.razer *
+{
+    color: #223;
+    gap: 1rem;
+    margin: .5rem;
+}
+
+

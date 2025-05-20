@@ -34,7 +34,19 @@ if (mysqli_num_rows($rest) > 0): ?>
                             <span><?= htmlspecialchars($res['wrkspace_name']) ?> — <b style="color: green;">from: </b><?=" ".$startFormatted?> <b style="color: red;">to:</b><?=" ".$endFormatted?></span>
                             <span>#<?= htmlspecialchars($res['reserv_ref']) ?></span>
                         </div>
-                    <?php endforeach; ?>
+                        <form action="./remresev.php" method="POST">
+                            <input type="hidden" name="remm">
+                            <input type="submit" name="remove" class="del" value="REMOVE id: <?php echo $res['reserv_ref']?>"style="background-color: oklch(63.7% 0.237 25.331);">
+                        </form>
+
+                        <?php 
+                    // if (!empty($_POST) && ($_SERVER['REQUEST_METHOD'])=='POST'):
+                    //     print_r($_POST);
+                    //     // $sql="DELETE FROM reservations WHERE `reservations`.`reserv_ref` = ".substr($_POST['remove'], 11);
+                    //     // mysqlquery($sql); 
+                    //     // echo "<script>location.reload()</script>";
+                    // endif;
+                endforeach; ?>
                 <?php else: ?>
                     <p>No current reservations.</p>
                 <?php endif; ?>

@@ -52,11 +52,11 @@ $rowresv=$rest -> fetch_all(MYSQLI_ASSOC);
             <form id="edit-form" class="hiddenn edform" action="update_account.php" method="POST">
                 <div>
                     <label for="username">Username</label>
-                    <input type="text" name="username" value="<?= htmlspecialchars($rowuser['username']) ?>">
+                    <input type="text" id="editname" name="username" value="<?= htmlspecialchars($rowuser['username']) ?>">
                 </div>
                 <div>
                     <label for="email">Email</label>
-                    <input type="email" name="email" value="<?= htmlspecialchars($rowuser['email']) ?>">
+                    <input type="email" id="editmail" name="email" value="<?= htmlspecialchars($rowuser['email']) ?>">
                 </div>
                 <div>
                     <label for="curr_password">Current Password</label>
@@ -64,11 +64,11 @@ $rowresv=$rest -> fetch_all(MYSQLI_ASSOC);
                 </div>
                 <div>
                     <label for="password">New Password</label>
-                    <input type="password" name="password">
+                    <input type="password"id="editpw" name="password">
                 </div>
                 <div>
                     <label for="confirm_password">Confirm Password</label>
-                    <input type="password" name="confirm_password">
+                    <input type="password" id="editconf" name="confirm_password">
                 </div>
                 <div style="grid-column: span 2;margin: 0rem auto 0rem auto;">
                     <input type="hidden" name="ref" value="<?=htmlspecialchars($rowuser['user_id'])?>">
@@ -116,8 +116,7 @@ if (mysqli_num_rows($rest) > 0): ?>
     }
 </script>
 <script src="../js/Scripts.js"></script>
-<?php
-print_r($_SESSION);
-?>
+<script src="../js/userupd.js"></script>
+
 </body>
 </html>
